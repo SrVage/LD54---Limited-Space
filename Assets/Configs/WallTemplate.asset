@@ -9,11 +9,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfc7296313034cc2bd32a1be66f03ebb, type: 3}
+  m_Script: {fileID: 11500000, guid: 7c01bcffcd2c4c65b3a67648ac50d8cf, type: 3}
   m_Name: WallTemplate
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Wall
-  _features: []
+  _features:
+  - rid: 6568860289326383109
+  - rid: 6568860289326383111
+  - rid: 6568860289326383114
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 6568860289326383109
+      type: {class: MoveDirectionComponent, ns: Code.ECS.Wall.Components, asm: Assembly-CSharp}
+      data:
+        Value:
+          x: 0
+          y: 0
+          z: -1
+    - rid: 6568860289326383111
+      type: {class: SpeedComponent, ns: Code.ECS.CommonComponents, asm: Assembly-CSharp}
+      data:
+        Value: 0.2
+    - rid: 6568860289326383114
+      type: {class: BordersPositionComponent, ns: Code.ECS.Wall.Components, asm: Assembly-CSharp}
+      data:
+        StartPosition:
+          x: 0
+          y: 0
+          z: 0
+        EndPosition:
+          x: 0
+          y: 0
+          z: 0

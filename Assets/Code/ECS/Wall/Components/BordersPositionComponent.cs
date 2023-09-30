@@ -1,11 +1,14 @@
 ﻿using Code.Abstract.Interfaces;
 using Unity.Entities;
+using Unity.Mathematics;
+using UnityEngine;
 
-namespace Code.ECS.CommonComponents
+namespace Code.ECS.Wall.Components
 {
-    public struct SpeedComponent:IComponentData, IEntityFeature
+    public struct BordersPositionComponent:IComponentData, IEntityFeature
     {
-        public float Value;
+        [HideInInspector] public float3 StartPosition;
+        [HideInInspector] public float3 EndPosition;
         public void Compose(IBaker baker, Entity entity)
         {
             baker.AddComponent(entity, this);

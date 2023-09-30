@@ -1,4 +1,4 @@
-﻿using Code.Abstract.Interfaces.Entity;
+﻿using Code.Abstract.Interfaces;
 using Unity.Entities;
 using Unity.Mathematics;
 
