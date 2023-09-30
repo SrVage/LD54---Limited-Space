@@ -17,8 +17,7 @@ namespace Code.ECS.Moving
         {
             foreach (var (movable, localTransform) in SystemAPI.Query<RefRO<MovableComponent>, RefRW<LocalTransform>>())
             {
-                localTransform.ValueRW.Position += localTransform.ValueRO.Forward() * movable.ValueRO.Speed *
-                                                   SystemAPI.Time.DeltaTime;
+                localTransform.ValueRW.Position += localTransform.ValueRO.Forward() * movable.ValueRO.Speed * SystemAPI.Time.DeltaTime;
             }
         }
     }
