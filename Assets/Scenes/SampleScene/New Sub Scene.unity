@@ -130,6 +130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1782004969}
   - component: {fileID: 1782004970}
+  - component: {fileID: 1782004971}
   m_Layer: 0
   m_Name: Map
   m_TagString: Untagged
@@ -164,17 +165,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fc0682e3e024c4c85dc288d8dcffc7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SimpleTilePrefab: {fileID: 1520717108233498, guid: de8c893d7828de14c9dd36b022cb7b3c,
-    type: 3}
-  TrapTilePrefab: {fileID: 4420215548733134221, guid: e09a9cf36bbc7c245ae73b2c3873836d,
-    type: 3}
-  SpeedDecreaseTilePrefab: {fileID: 2395241632344769566, guid: 116e8817e9f91114b82efccc340dcbed,
-    type: 3}
-  UnWalkTilePrefab: {fileID: 3509373567624617763, guid: 90b91dd346da9ec49bec324f8ef1fdef,
-    type: 3}
-  MapSize:
-    x: 4
-    y: 4
+  Config: {fileID: 11400000, guid: bb7620b1412e4f042b0b378efd1796bf, type: 2}
+--- !u!114 &1782004971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782004968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12f1e080746e48a69be262d94852fce4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Config: {fileID: 11400000, guid: bb7620b1412e4f042b0b378efd1796bf, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
