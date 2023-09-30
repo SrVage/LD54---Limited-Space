@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 056b40398108e074e9a808d1b661622a
+timeCreated: 1501508919
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 96865
+  packageName: Medieval Tombs - Egypt
+  packageVersion: 1.0
+  assetPath: Assets/MedievalTombEgypt/Materials/td_e_floor_dif_01.mat
+  uploadId: 193095

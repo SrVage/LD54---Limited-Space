@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: abf5a76db586e9148991f4a642dce579
+timeCreated: 1501510532
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 96865
+  packageName: Medieval Tombs - Egypt
+  packageVersion: 1.0
+  assetPath: Assets/MedievalTombEgypt/Prefabs/doors_p.prefab
+  uploadId: 193095

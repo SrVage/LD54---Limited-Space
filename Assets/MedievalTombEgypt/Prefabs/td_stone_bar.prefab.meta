@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 5c7d77dbdb4f15c42baec21bf9d51677
+timeCreated: 1501518492
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 96865
+  packageName: Medieval Tombs - Egypt
+  packageVersion: 1.0
+  assetPath: Assets/MedievalTombEgypt/Prefabs/td_stone_bar.prefab
+  uploadId: 193095
