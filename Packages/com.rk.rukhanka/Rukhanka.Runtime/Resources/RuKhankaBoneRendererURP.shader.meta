@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 466884722cc8db04e859c7642875ddfa
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 241472
+  packageName: Rukhanka - ECS Animation System
+  packageVersion: 1.4.0
+  assetPath: Packages/com.rk.rukhanka/Rukhanka.Runtime/Resources/RuKhankaBoneRendererURP.shader
+  uploadId: 616667

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7287370cd74279e438f6e0c16ec99313
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 241472
+  packageName: Rukhanka - ECS Animation System
+  packageVersion: 1.4.0
+  assetPath: Packages/com.rk.rukhanka/Samples~/Samples/SampleAssets/Robot Kyle/Animations/Kyle_LandRoll.anim
+  uploadId: 616667

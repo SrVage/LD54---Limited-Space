@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7ec10f0d3b1efb14281e48d3604e9f85
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 31900000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 241472
+  packageName: Rukhanka - ECS Animation System
+  packageVersion: 1.4.0
+  assetPath: Packages/com.rk.rukhanka/Samples~/Samples/Scenes/11. Crowd/Prefabs/ArmatureOptimizationMask.mask
+  uploadId: 616667

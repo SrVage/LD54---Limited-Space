@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b0ef72cb6db98fc40ad4c806ecf704f2
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 241472
+  packageName: Rukhanka - ECS Animation System
+  packageVersion: 1.4.0
+  assetPath: Packages/com.rk.rukhanka/Rukhanka.Runtime/Resources/RukhankaBoneRendererURP.mat
+  uploadId: 616667

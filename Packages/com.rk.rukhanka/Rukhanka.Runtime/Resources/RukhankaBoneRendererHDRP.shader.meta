@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c854acf9adbb87440a442b19414e767a
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 241472
+  packageName: Rukhanka - ECS Animation System
+  packageVersion: 1.4.0
+  assetPath: Packages/com.rk.rukhanka/Rukhanka.Runtime/Resources/RukhankaBoneRendererHDRP.shader
+  uploadId: 616667
