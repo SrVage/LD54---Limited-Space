@@ -1,6 +1,7 @@
 using Code.Abstract.Interfaces;
 using Unity.Collections;
 using Unity.Entities;
+using Unity.Physics;
 using UnityEngine;
 
 namespace Code.ECS.Enemies.Spawn

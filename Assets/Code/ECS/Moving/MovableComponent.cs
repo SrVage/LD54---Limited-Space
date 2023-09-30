@@ -10,11 +10,13 @@ namespace Code.ECS.Moving
         public void Compose(IBaker baker, Entity entity)
         {
             baker.AddComponent(entity, this);
+            baker.SetComponentEnabled<MovableComponent>(entity, false);
         }
 
         public void Compose(EntityCommandBuffer entityCommandBuffer, Entity entity)
         {            
             entityCommandBuffer.AddComponent(entity, this);
+            entityCommandBuffer.SetComponentEnabled<MovableComponent>(entity, false);
         }
     }
 }

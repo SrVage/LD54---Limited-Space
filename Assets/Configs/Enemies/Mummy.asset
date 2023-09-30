@@ -17,6 +17,8 @@ MonoBehaviour:
   - rid: 4591153330052399104
   - rid: 4591153330052399105
   - rid: 4591153334565994497
+  - rid: 4591153339211710468
+  - rid: 4591153334565994499
   references:
     version: 2
     RefIds:
@@ -30,3 +32,10 @@ MonoBehaviour:
       type: {class: MovableComponent, ns: Code.ECS.Moving, asm: Assembly-CSharp}
       data:
         Speed: 5
+    - rid: 4591153334565994499
+      type: {class: TargetableComponent, ns: Code.ECS.Enemies.Targeting, asm: Assembly-CSharp}
+      data: 
+    - rid: 4591153339211710468
+      type: {class: Rotatable, ns: Code.ECS.Moving, asm: Assembly-CSharp}
+      data:
+        ValueInDegrees: 2

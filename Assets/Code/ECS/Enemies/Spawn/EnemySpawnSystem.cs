@@ -4,6 +4,7 @@ using Unity.Burst;
 using Unity.Collections;
 using Unity.Entities;
 using Unity.Mathematics;
+using Unity.Physics;
 using Unity.Rendering;
 using Unity.Transforms;
 using UnityEngine;
@@ -137,6 +138,11 @@ namespace Code.ECS.Enemies.Spawn
                     _currentEnemyTag++;
 
                     SystemAPI.GetComponentRW<LocalTransform>(_cachedEnemyEntity).ValueRW.Position = _cachedSpawnPosition;
+
+                    var mass = EntityManager.GetComponentData<PhysicsMass>(_cachedEnemyEntity);
+                    mass.InverseInertia.x = 0;
+                    mass.InverseInertia.z = 0;
+                    EntityManager.SetComponentData(_cachedEnemyEntity, mass);
                 }
             }
         }
