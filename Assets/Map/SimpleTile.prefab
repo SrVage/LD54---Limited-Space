@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23946719508975556}
   - component: {fileID: 65119122773042232}
   m_Layer: 0
-  m_Name: td_e_tile_01
+  m_Name: SimpleTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
