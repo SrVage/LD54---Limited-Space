@@ -16,7 +16,7 @@ namespace Code.ECS.Enemies.Spawn
         [BurstCompile]
         public void OnUpdate(ref SystemState state)
         {
-            foreach (RefRW<EnemySpawnerComponent> spawner in SystemAPI.Query<RefRW<EnemySpawnerComponent>>())
+            foreach (var spawner in SystemAPI.Query<RefRW<EnemySpawnerComponent>>())
             {
                 spawner.ValueRW.LevelTimer += SystemAPI.Time.DeltaTime;
                 

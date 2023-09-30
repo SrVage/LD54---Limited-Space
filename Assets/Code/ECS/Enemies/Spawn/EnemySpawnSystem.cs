@@ -37,8 +37,7 @@ namespace Code.ECS.Enemies.Spawn
         {
             RequireForUpdate<EnemySpawnerComponent>();
             RequireForUpdate<EnemySpawnPointComponent>();
-            RequireForUpdate<WorldRenderBounds>();
-            RequireForUpdate<ConfigReferenceService>();
+            RequireForUpdate<ReferenceConfigReferenceService>();
 
             var spawnedEnemiesQuery = new EntityQueryDesc
             {
@@ -47,7 +46,7 @@ namespace Code.ECS.Enemies.Spawn
             };
             
             _spawnedEnemiesQuery = World.EntityManager.CreateEntityQuery(typeof(EnemyComponent));
-            _spawnPointsQuery = World.EntityManager.CreateEntityQuery(typeof(EnemySpawnPointComponent), typeof(WorldRenderBounds), typeof(LocalTransform));
+            _spawnPointsQuery = World.EntityManager.CreateEntityQuery(typeof(EnemySpawnPointComponent), typeof(LocalTransform));
             //_reusableEnemiesQuery = World.EntityManager.CreateEntityQuery(typeof(EnemyComponent), typeof(ReadyForReuseComponent));
 
             _cachedSpawnPosition = default;
@@ -71,7 +70,7 @@ namespace Code.ECS.Enemies.Spawn
 
                 if (_enemies.Cap > _targetEnemiesCount)
                 {
-                    _targetEnemiesCount = (Mathf.FloorToInt(spawner.ValueRO.LevelTimer / 30) * _enemies.PerHalfMinuteMultiply);
+                    _targetEnemiesCount = _enemies.Start + (Mathf.FloorToInt(spawner.ValueRO.LevelTimer / 30) * _enemies.PerHalfMinuteMultiply);
                 }
                 
                 if (_spawnedEnemiesQuery.CalculateEntityCount() >= _targetEnemiesCount)
@@ -87,7 +86,7 @@ namespace Code.ECS.Enemies.Spawn
 
         private void WriteEnemiesCount()
         {
-            foreach (var configReferenceServiceReferenceComponent in SystemAPI.Query<ConfigReferenceService>())
+            foreach (var configReferenceServiceReferenceComponent in SystemAPI.Query<ReferenceConfigReferenceService>())
             {
                 _enemies = configReferenceServiceReferenceComponent.Value.LevelConfig.Enemies;
                 
@@ -110,7 +109,7 @@ namespace Code.ECS.Enemies.Spawn
         [BurstCompile]
         private void StartSpawn()
         {
-            var availablePoints = _spawnPointsQuery.ToComponentDataArray<WorldRenderBounds>(Allocator.Temp);
+            var availablePoints = _spawnPointsQuery.ToComponentDataArray<LocalTransform>(Allocator.Temp);
             
             foreach (var (enemySpawnerComponent, spawnerEntity) in SystemAPI.Query<RefRO<EnemySpawnerComponent>>().WithEntityAccess())
             {
@@ -120,8 +119,7 @@ namespace Code.ECS.Enemies.Spawn
                 
                 for (int i = 0; i < spawnCount; i++)
                 {
-                    _cachedSpawnPosition.x = availablePoints[i].Value.Center.x;
-                    _cachedSpawnPosition.z = availablePoints[i].Value.Center.z;
+                    _cachedSpawnPosition = availablePoints[i].Position;
                     
                     // Spawn new enemy
 

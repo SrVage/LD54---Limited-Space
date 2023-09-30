@@ -6,9 +6,17 @@ using UnityEngine;
 
 namespace Code.ECS.Enemies.Spawn
 {
-    public struct EnemySpawnPointComponent : IComponentData
+    public struct EnemySpawnPointComponent : IComponentData, IEntityFeature
     {
-        
+        public void Compose(IBaker baker, Entity entity)
+        {
+            baker.AddComponent(entity, this);
+        }
+
+        public void Compose(EntityCommandBuffer entityCommandBuffer, Entity entity)
+        {
+            entityCommandBuffer.AddComponent(entity, this);
+        }
     }
 
     public class EnemySpawnPointAuthoring : BaseBakeableAuthoring

@@ -13,6 +13,7 @@ namespace Code.Configs
         public struct EnemiesCount
         {
             public int Cap;
+            public int Start;
             public int SpawnPerTime;
             public int PerHalfMinuteMultiply;
             [SerializeReference] public IEntityTag[] Tags;

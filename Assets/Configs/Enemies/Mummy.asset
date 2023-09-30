@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c01bcffcd2c4c65b3a67648ac50d8cf, type: 3}
+  m_Name: Mummy
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: Mummy
+  _features:
+  - rid: 4591153330052399104
+  - rid: 4591153330052399105
+  - rid: 4591153334565994497
+  references:
+    version: 2
+    RefIds:
+    - rid: 4591153330052399104
+      type: {class: EnemyComponent, ns: Code.ECS.Enemies, asm: Assembly-CSharp}
+      data: 
+    - rid: 4591153330052399105
+      type: {class: Mummy, ns: Code.ECS.Enemies.Tag, asm: Assembly-CSharp}
+      data: 
+    - rid: 4591153334565994497
+      type: {class: MovableComponent, ns: Code.ECS.Moving, asm: Assembly-CSharp}
+      data:
+        Speed: 5
