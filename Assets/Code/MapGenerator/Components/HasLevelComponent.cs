@@ -1,6 +1,6 @@
 ﻿using Unity.Entities;
 
-namespace Code.MapGenerator
+namespace Code.MapGenerator.Components
 {
     public struct HasLevelComponent:IComponentData
     {
