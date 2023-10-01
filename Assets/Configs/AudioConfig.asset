@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c6fb8ee15db46888cea7410fc82d534, type: 3}
+  m_Name: AudioConfig
+  m_EditorClassIdentifier: 
+  <MusicTransitionValue>k__BackingField: 5
+  <AudioTags>k__BackingField:
+  - {fileID: 4982287252217416331, guid: 94339b35990e6f040aa37ad6d880e234, type: 3}
+  - {fileID: 5042911722370385690, guid: 8c7b9ef71488ca940a7b38cb43b3cf84, type: 3}
+  <BaseAudioListener>k__BackingField: {fileID: 7983036155098317560, guid: 3f569772091b4b84d8bbb927f8e2194a,
+    type: 3}
+  <ClickButton>k__BackingField:
+    <Audio>k__BackingField: {fileID: 8300000, guid: dd1a4df0b30e2f149a7077d6c48b725c,
+      type: 3}
+    <VolumeScale>k__BackingField: 1
+  <MainMenuTheme>k__BackingField:
+    <Audio>k__BackingField: {fileID: 8300000, guid: a6b7d0790f5fa5c4c9ac788ccdb3aede,
+      type: 3}
+    <VolumeScale>k__BackingField: 0.3
+  <GameplayMusic>k__BackingField:
+    <Audio>k__BackingField: {fileID: 8300000, guid: 17a4258039b784f43a41f3935f4403c6,
+      type: 3}
+    <VolumeScale>k__BackingField: 0.1
+  <Step>k__BackingField:
+    <Audio>k__BackingField: {fileID: 8300000, guid: 98c61bc01d2dc5548b6362c440eab234,
+      type: 3}
+    <VolumeScale>k__BackingField: 1
+  <SecondStep>k__BackingField:
+    <Audio>k__BackingField: {fileID: 8300000, guid: 5276f8ef14e52ac468c4dc04cfe13f21,
+      type: 3}
+    <VolumeScale>k__BackingField: 1
+  <Hit>k__BackingField:
+    <Audio>k__BackingField: {fileID: 8300000, guid: d216c000bca9b8f4095fc2604683aa8d,
+      type: 3}
+    <VolumeScale>k__BackingField: 1

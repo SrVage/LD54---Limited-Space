@@ -1,6 +1,7 @@
 using Code.Abstract.Interfaces;
 using Code.Abstract.Interfaces.UI.Common;
 using Code.Abstract.Interfaces.UI.MainMenu;
+using Code.Audio.Service;
 using Code.Services.UI.Gameplay;
 using Code.Services.UI.MainMenu;
 using Code.Services.UI.MainMenu.Panels;
@@ -26,6 +27,7 @@ namespace Code.Services
             Container.Bind<IUIManager>().WithId(nameof(MainMenu)).To<MainMenu>().AsSingle().NonLazy();
             Container.Bind<IUIManager>().WithId(nameof(Gameplay)).To<Gameplay>().AsSingle().NonLazy();
             
+            Container.Bind<IAudioService>().To<AudioService>().AsSingle();
             Container.Bind<IConfigReferenceService>().To<ConfigReferenceService>().AsSingle().NonLazy();
         }
     }

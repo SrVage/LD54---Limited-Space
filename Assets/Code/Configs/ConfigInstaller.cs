@@ -9,6 +9,7 @@ namespace Code.Configs
     
         public override void InstallBindings()
         {
+            Container.Bind<AudioConfig>().FromInstance(_configsSingle.AudioConfig).AsSingle().NonLazy();
             Container.Bind<UIConfig>().FromInstance(_configsSingle.UIConfig).AsSingle().NonLazy();
             Container.Bind<LevelConfig>().FromInstance(_configsSingle.LevelConfig).AsSingle().NonLazy();
         }

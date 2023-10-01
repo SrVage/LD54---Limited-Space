@@ -20,6 +20,11 @@ namespace Code.ECS.States.Systems.StatesGroups
             {
                 gameplayManagerReference.Value.IsCurrentState.Value = true;
             }
+            
+            foreach (var gameplayManagerReference in SystemAPI.Query<AudioServiceReference>())
+            {
+                gameplayManagerReference.Value.SetGameplayMusic();
+            }
         }
 
         protected override void OnUpdate()
