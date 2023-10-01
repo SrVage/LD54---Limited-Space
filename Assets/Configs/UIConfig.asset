@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 462554b96dfa4c5c879f3f96d747cbf0, type: 3}
   m_Name: UIConfig
   m_EditorClassIdentifier: 
+  <MainUI>k__BackingField: {fileID: 284762794685787432, guid: 6a658d9fcefdc58498b26937b29b95c4,
+    type: 3}
   <UIViews>k__BackingField:
   - {fileID: 5854731269766298311, guid: 0174b23176f7d544281740e310b1adf1, type: 3}
   - {fileID: 5145395990725566536, guid: 4ac314c6f277d8f4eabc0ba55dd49b9d, type: 3}

@@ -91,9 +91,9 @@ namespace Code.MapGenerator.Systems
             tile = state.EntityManager.Instantiate(tiles.ValueRO.SimpleTilePrefab);
             var transform = SystemAPI.GetComponentRW<LocalTransform>(tile);
             transform.ValueRW.Position = new float3(2*pos.x, 0, 2*pos.y);
-            var offset = state.EntityManager.GetComponentData<EnemySpawnPointComponent>(tile).Value;
+            var offset = state.EntityManager.GetComponentData<EnemySpawnPointComponent>(tile).OffsetFromOriginalEntity;
             var position = state.EntityManager.GetComponentData<LocalTransform>(tile).Position;
-            state.EntityManager.SetComponentData(tile, new EnemySpawnPointComponent(){Value = offset+position});
+            state.EntityManager.SetComponentData(tile, new EnemySpawnPointComponent(){EndValue = offset+position});
             return tile;
         }
 
