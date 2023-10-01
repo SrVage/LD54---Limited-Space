@@ -14,20 +14,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Player
   _features:
-  - rid: 160921251216883713
+  - rid: 160921253962842130
   - rid: 160921251216883712
   - rid: 160921253962842118
+  - rid: 160921253962842137
   references:
     version: 2
     RefIds:
     - rid: 160921251216883712
       type: {class: PlayerComponent, ns: Code.ECS.Player.Components, asm: Assembly-CSharp}
       data: 
-    - rid: 160921251216883713
-      type: {class: SpeedComponent, ns: Code.ECS.CommonComponents, asm: Assembly-CSharp}
-      data:
-        Value: 5
     - rid: 160921253962842118
       type: {class: HealthComponent, ns: Code.ECS.Player.Components, asm: Assembly-CSharp}
       data:
         Value: 100
+    - rid: 160921253962842130
+      type: {class: SpeedComponent, ns: Code.ECS.CommonComponents, asm: Assembly-CSharp}
+      data:
+        Value: 2
+    - rid: 160921253962842137
+      type: {class: StrengthAttackComponent, ns: Code.ECS.Player.Components, asm: Assembly-CSharp}
+      data:
+        Value: 30
+        Distance: 3
+        Range: 0.9

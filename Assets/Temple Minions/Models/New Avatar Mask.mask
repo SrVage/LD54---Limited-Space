@@ -12,7 +12,7 @@ AvatarMask:
   - m_Path: 
     m_Weight: 1
   - m_Path: Skeleton_0010:Minion
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Skeleton_0010:QuickRigCharacter_Ctrl_Reference
     m_Weight: 1
   - m_Path: Skeleton_0010:QuickRigCharacter_Ctrl_Reference/Skeleton_0010:QuickRigCharacter_Ctrl_ChestEndEffector

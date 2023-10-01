@@ -19,9 +19,14 @@ MonoBehaviour:
   - rid: 4591153334565994497
   - rid: 4591153339211710468
   - rid: 4591153334565994499
+  - rid: 160921253962842140
   references:
     version: 2
     RefIds:
+    - rid: 160921253962842140
+      type: {class: HealthComponent, ns: Code.ECS.Player.Components, asm: Assembly-CSharp}
+      data:
+        Value: 70
     - rid: 4591153330052399104
       type: {class: EnemyComponent, ns: Code.ECS.Enemies, asm: Assembly-CSharp}
       data: 
