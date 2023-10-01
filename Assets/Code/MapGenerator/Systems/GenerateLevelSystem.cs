@@ -1,4 +1,5 @@
-﻿using Code.MapGenerator.Components;
+﻿using Code.ECS.Enemies.Spawn;
+using Code.MapGenerator.Components;
 using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Transforms;
@@ -44,7 +45,7 @@ namespace Code.MapGenerator.Systems
                             if (randomTile < percents.x)
                             {
                                 if (counts.x >= calculateCounts.x)
-                                    tile = state.EntityManager.Instantiate(tiles.ValueRO.SimpleTilePrefab);
+                                    tile = CreateSimpleTile(state, tiles, new float2(i, j));
                                 else
                                 {
                                     counts.x++;
@@ -54,7 +55,7 @@ namespace Code.MapGenerator.Systems
                             else if (randomTile >= percents.x && randomTile<percents.y+percents.x)
                             {
                                 if (counts.y >= calculateCounts.y)
-                                    tile = state.EntityManager.Instantiate(tiles.ValueRO.SimpleTilePrefab);
+                                    tile = CreateSimpleTile(state, tiles, new float2(i, j));
                                 else
                                 {
                                     counts.y++;
@@ -64,7 +65,7 @@ namespace Code.MapGenerator.Systems
                             else if (randomTile >= percents.x+percents.y && randomTile<percents.x+percents.y+percents.z)
                             {
                                 if (counts.z >= calculateCounts.z)
-                                    tile = state.EntityManager.Instantiate(tiles.ValueRO.SimpleTilePrefab);
+                                    tile = CreateSimpleTile(state, tiles, new float2(i, j));
                                 else
                                 {
                                     counts.z++;
@@ -73,7 +74,7 @@ namespace Code.MapGenerator.Systems
                             }
                             else
                             {
-                                tile = state.EntityManager.Instantiate(tiles.ValueRO.SimpleTilePrefab);
+                                tile = CreateSimpleTile(state, tiles, new float2(i, j));
                             }
                         }
                         var transform = SystemAPI.GetComponentRW<LocalTransform>(tile);
@@ -82,6 +83,18 @@ namespace Code.MapGenerator.Systems
                 }
             }
             state.EntityManager.AddComponent<HasLevelComponent>(state.EntityManager.CreateEntity());
+        }
+
+        private Entity CreateSimpleTile(SystemState state, RefRO<TilesPrefabComponent> tiles, float2 pos)
+        {
+            Entity tile;
+            tile = state.EntityManager.Instantiate(tiles.ValueRO.SimpleTilePrefab);
+            var transform = SystemAPI.GetComponentRW<LocalTransform>(tile);
+            transform.ValueRW.Position = new float3(2*pos.x, 0, 2*pos.y);
+            var offset = state.EntityManager.GetComponentData<EnemySpawnPointComponent>(tile).Value;
+            var position = state.EntityManager.GetComponentData<LocalTransform>(tile).Position;
+            state.EntityManager.SetComponentData(tile, new EnemySpawnPointComponent(){Value = offset+position});
+            return tile;
         }
 
         private int3 CalculateCounts(int3 percents, int generalCount)
