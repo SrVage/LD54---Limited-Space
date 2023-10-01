@@ -34,6 +34,10 @@ namespace Code.MapGenerator.Systems
                         {
                             tile = state.EntityManager.Instantiate(tiles.ValueRO.StartTilePrefab);
                         }
+                        else if (startTile.x == i+1 && startTile.y == j-1)
+                        {
+                            tile = state.EntityManager.Instantiate(tiles.ValueRO.SpawnTilePrefab);
+                        }
                         else
                         {
                             var randomTile = Random.Range(0, 100);

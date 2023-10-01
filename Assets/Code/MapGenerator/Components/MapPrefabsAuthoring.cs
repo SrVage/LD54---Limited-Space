@@ -16,6 +16,7 @@ namespace Code.MapGenerator.Components
         public Entity SpeedDecreaseTilePrefab;
         public Entity UnWalkTilePrefab;
         public Entity StartTilePrefab;
+        public Entity SpawnTilePrefab;
         public int3 Percents;
     }
 
@@ -36,6 +37,7 @@ namespace Code.MapGenerator.Components
                 SpeedDecreaseTilePrefab = GetEntity(authoring.Config.SpeedDecreaseTilePrefab, TransformUsageFlags.Dynamic),
                 UnWalkTilePrefab = GetEntity(authoring.Config.UnWalkTilePrefab, TransformUsageFlags.Dynamic),
                 StartTilePrefab = GetEntity(authoring.Config.StartTilePrefab, TransformUsageFlags.Dynamic),
+                SpawnTilePrefab = GetEntity(authoring.Config.SpawnTilePrefab, TransformUsageFlags.Dynamic),
                 Percents = authoring.Config.TilesPercents
             });
             AddComponent(entity, new MapSizeComponent()

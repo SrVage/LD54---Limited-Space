@@ -12,6 +12,7 @@ namespace Code.MapGenerator
         public GameObject SpeedDecreaseTilePrefab;
         public GameObject UnWalkTilePrefab;
         public GameObject StartTilePrefab;
+        public GameObject SpawnTilePrefab;
         public int2 MapSize;
         public int3 TilesPercents;
         [Header("Walls")]

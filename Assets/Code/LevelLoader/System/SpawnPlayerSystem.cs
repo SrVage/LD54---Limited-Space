@@ -2,6 +2,7 @@ using Code.ECS.Player.Components;
 using Code.LevelLoader.Components;
 using Unity.Burst;
 using Unity.Entities;
+using Unity.Physics;
 using Unity.Transforms;
 
 namespace Code.LevelLoader.System
@@ -12,7 +13,6 @@ namespace Code.LevelLoader.System
         
         public void OnCreate(ref SystemState state)
         {
-            state.RequireForUpdate<PlayerSpawnComponent>();
             var spawnedPlayer = new EntityQueryDesc()
             {
                 All = new ComponentType[]{typeof(PlayerComponent)}, 
@@ -32,12 +32,16 @@ namespace Code.LevelLoader.System
                 return;
             
             var prefab = SystemAPI.GetSingleton<PlayerSpawnComponent>().PlayerPrefab;
-            var position = SystemAPI.GetSingleton<SpawnPointComponent>().Position;
+            var spawnPointEntity = SystemAPI.GetSingletonEntity<SpawnPointComponent>();
+            var position = SystemAPI.GetComponentRO<LocalToWorld>(spawnPointEntity).ValueRO.Position;
             var entity = state.EntityManager.Instantiate(prefab);
             var transform = SystemAPI.GetComponentRW<LocalTransform>(entity);
             transform.ValueRW.Position = position;
-            
             state.EntityManager.DestroyEntity(SystemAPI.GetSingletonEntity<PlayerSpawnComponent>());
+            var mass = state.EntityManager.GetComponentData<PhysicsMass>(entity);
+            mass.InverseInertia.x = 0;
+            mass.InverseInertia.z = 0;
+            state.EntityManager.SetComponentData(entity, mass);
         }
 
         [BurstCompile]

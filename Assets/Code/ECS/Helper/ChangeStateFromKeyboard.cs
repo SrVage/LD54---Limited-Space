@@ -9,7 +9,7 @@ namespace Code.ECS.Helper
     {
         public void OnUpdate(ref SystemState state)
         {
-            if (Input.GetKeyDown(KeyCode.P))
+            if (UnityEngine.Input.GetKeyDown(KeyCode.P))
             {
                 var entity = state.EntityManager.CreateEntity();
                 state.EntityManager.AddComponent<ChangeState>(entity);
@@ -18,7 +18,7 @@ namespace Code.ECS.Helper
                     Value = State.PlayState
                 });
             }
-            if (Input.GetKeyDown(KeyCode.M))
+            if (UnityEngine.Input.GetKeyDown(KeyCode.M))
             {
                 var entity = state.EntityManager.CreateEntity();
                 state.EntityManager.AddComponent<ChangeState>(entity);
@@ -27,7 +27,7 @@ namespace Code.ECS.Helper
                     Value = State.MenuState
                 });
             }
-            if (Input.GetKeyDown(KeyCode.R))
+            if (UnityEngine.Input.GetKeyDown(KeyCode.R))
             {
                 var entity = state.EntityManager.CreateEntity();
                 state.EntityManager.AddComponent<ChangeState>(entity);

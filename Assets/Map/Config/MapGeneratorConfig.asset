@@ -22,6 +22,8 @@ MonoBehaviour:
     type: 3}
   StartTilePrefab: {fileID: 5985904105807202749, guid: 0c6babf54a8fa934d85472558f1d11e6,
     type: 3}
+  SpawnTilePrefab: {fileID: 8474800334693174350, guid: 078f4bb5a4a6183409247654161afbc4,
+    type: 3}
   MapSize:
     x: 5
     y: 5
