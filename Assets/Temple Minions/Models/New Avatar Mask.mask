@@ -1,0 +1,237 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: New Avatar Mask
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Skeleton_0010:Minion
+    m_Weight: 0
+  - m_Path: Skeleton_0010:QuickRigCharacter_Ctrl_Reference
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Ctrl_Reference/Skeleton_0010:QuickRigCharacter_Ctrl_ChestEndEffector
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Ctrl_Reference/Skeleton_0010:QuickRigCharacter_Ctrl_ChestOriginEffector
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Ctrl_Reference/Skeleton_0010:QuickRigCharacter_Ctrl_Hips
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Ctrl_Reference/Skeleton_0010:QuickRigCharacter_Ctrl_Hips/Skeleton_0010:QuickRigCharacter_Ctrl_LeftUpLeg
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Ctrl_Reference/Skeleton_0010:QuickRigCharacter_Ctrl_Hips/Skeleton_0010:QuickRigCharacter_Ctrl_LeftUpLeg/Skeleton_0010:QuickRigCharacter_Ctrl_LeftLeg
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Ctrl_Reference/Skeleton_0010:QuickRigCharacter_Ctrl_Hips/Skeleton_0010:QuickRigCharacter_Ctrl_LeftUpLeg/Skeleton_0010:QuickRigCharacter_Ctrl_LeftLeg/Skeleton_0010:QuickRigCharacter_Ctrl_LeftFoot
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Ctrl_Reference/Skeleton_0010:QuickRigCharacter_Ctrl_Hips/Skeleton_0010:QuickRigCharacter_Ctrl_LeftUpLeg/Skeleton_0010:QuickRigCharacter_Ctrl_LeftLeg/Skeleton_0010:QuickRigCharacter_Ctrl_LeftFoot/Skeleton_0010:QuickRigCharacter_Ctrl_LeftToeBase
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Ctrl_Reference/Skeleton_0010:QuickRigCharacter_Ctrl_Hips/Skeleton_0010:QuickRigCharacter_Ctrl_RightUpLeg
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Ctrl_Reference/Skeleton_0010:QuickRigCharacter_Ctrl_Hips/Skeleton_0010:QuickRigCharacter_Ctrl_RightUpLeg/Skeleton_0010:QuickRigCharacter_Ctrl_RightLeg
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Ctrl_Reference/Skeleton_0010:QuickRigCharacter_Ctrl_Hips/Skeleton_0010:QuickRigCharacter_Ctrl_RightUpLeg/Skeleton_0010:QuickRigCharacter_Ctrl_RightLeg/Skeleton_0010:QuickRigCharacter_Ctrl_RightFoot
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Ctrl_Reference/Skeleton_0010:QuickRigCharacter_Ctrl_Hips/Skeleton_0010:QuickRigCharacter_Ctrl_RightUpLeg/Skeleton_0010:QuickRigCharacter_Ctrl_RightLeg/Skeleton_0010:QuickRigCharacter_Ctrl_RightFoot/Skeleton_0010:QuickRigCharacter_Ctrl_RightToeBase
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Ctrl_Reference/Skeleton_0010:QuickRigCharacter_Ctrl_Hips/Skeleton_0010:QuickRigCharacter_Ctrl_Spine
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Ctrl_Reference/Skeleton_0010:QuickRigCharacter_Ctrl_Hips/Skeleton_0010:QuickRigCharacter_Ctrl_Spine/Skeleton_0010:QuickRigCharacter_Ctrl_Spine1
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Ctrl_Reference/Skeleton_0010:QuickRigCharacter_Ctrl_Hips/Skeleton_0010:QuickRigCharacter_Ctrl_Spine/Skeleton_0010:QuickRigCharacter_Ctrl_Spine1/Skeleton_0010:QuickRigCharacter_Ctrl_LeftShoulder
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Ctrl_Reference/Skeleton_0010:QuickRigCharacter_Ctrl_Hips/Skeleton_0010:QuickRigCharacter_Ctrl_Spine/Skeleton_0010:QuickRigCharacter_Ctrl_Spine1/Skeleton_0010:QuickRigCharacter_Ctrl_LeftShoulder/Skeleton_0010:QuickRigCharacter_Ctrl_LeftArm
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Ctrl_Reference/Skeleton_0010:QuickRigCharacter_Ctrl_Hips/Skeleton_0010:QuickRigCharacter_Ctrl_Spine/Skeleton_0010:QuickRigCharacter_Ctrl_Spine1/Skeleton_0010:QuickRigCharacter_Ctrl_LeftShoulder/Skeleton_0010:QuickRigCharacter_Ctrl_LeftArm/Skeleton_0010:QuickRigCharacter_Ctrl_LeftForeArm
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Ctrl_Reference/Skeleton_0010:QuickRigCharacter_Ctrl_Hips/Skeleton_0010:QuickRigCharacter_Ctrl_Spine/Skeleton_0010:QuickRigCharacter_Ctrl_Spine1/Skeleton_0010:QuickRigCharacter_Ctrl_LeftShoulder/Skeleton_0010:QuickRigCharacter_Ctrl_LeftArm/Skeleton_0010:QuickRigCharacter_Ctrl_LeftForeArm/Skeleton_0010:QuickRigCharacter_Ctrl_LeftHand
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Ctrl_Reference/Skeleton_0010:QuickRigCharacter_Ctrl_Hips/Skeleton_0010:QuickRigCharacter_Ctrl_Spine/Skeleton_0010:QuickRigCharacter_Ctrl_Spine1/Skeleton_0010:QuickRigCharacter_Ctrl_Neck
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Ctrl_Reference/Skeleton_0010:QuickRigCharacter_Ctrl_Hips/Skeleton_0010:QuickRigCharacter_Ctrl_Spine/Skeleton_0010:QuickRigCharacter_Ctrl_Spine1/Skeleton_0010:QuickRigCharacter_Ctrl_Neck/Skeleton_0010:QuickRigCharacter_Ctrl_Head
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Ctrl_Reference/Skeleton_0010:QuickRigCharacter_Ctrl_Hips/Skeleton_0010:QuickRigCharacter_Ctrl_Spine/Skeleton_0010:QuickRigCharacter_Ctrl_Spine1/Skeleton_0010:QuickRigCharacter_Ctrl_RightShoulder
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Ctrl_Reference/Skeleton_0010:QuickRigCharacter_Ctrl_Hips/Skeleton_0010:QuickRigCharacter_Ctrl_Spine/Skeleton_0010:QuickRigCharacter_Ctrl_Spine1/Skeleton_0010:QuickRigCharacter_Ctrl_RightShoulder/Skeleton_0010:QuickRigCharacter_Ctrl_RightArm
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Ctrl_Reference/Skeleton_0010:QuickRigCharacter_Ctrl_Hips/Skeleton_0010:QuickRigCharacter_Ctrl_Spine/Skeleton_0010:QuickRigCharacter_Ctrl_Spine1/Skeleton_0010:QuickRigCharacter_Ctrl_RightShoulder/Skeleton_0010:QuickRigCharacter_Ctrl_RightArm/Skeleton_0010:QuickRigCharacter_Ctrl_RightForeArm
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Ctrl_Reference/Skeleton_0010:QuickRigCharacter_Ctrl_Hips/Skeleton_0010:QuickRigCharacter_Ctrl_Spine/Skeleton_0010:QuickRigCharacter_Ctrl_Spine1/Skeleton_0010:QuickRigCharacter_Ctrl_RightShoulder/Skeleton_0010:QuickRigCharacter_Ctrl_RightArm/Skeleton_0010:QuickRigCharacter_Ctrl_RightForeArm/Skeleton_0010:QuickRigCharacter_Ctrl_RightHand
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Ctrl_Reference/Skeleton_0010:QuickRigCharacter_Ctrl_HipsEffector
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Ctrl_Reference/Skeleton_0010:QuickRigCharacter_Ctrl_LeftAnkleEffector
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Ctrl_Reference/Skeleton_0010:QuickRigCharacter_Ctrl_LeftElbowEffector
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Ctrl_Reference/Skeleton_0010:QuickRigCharacter_Ctrl_LeftFootEffector
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Ctrl_Reference/Skeleton_0010:QuickRigCharacter_Ctrl_LeftHipEffector
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Ctrl_Reference/Skeleton_0010:QuickRigCharacter_Ctrl_LeftKneeEffector
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Ctrl_Reference/Skeleton_0010:QuickRigCharacter_Ctrl_LeftShoulderEffector
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Ctrl_Reference/Skeleton_0010:QuickRigCharacter_Ctrl_LeftWristEffector
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Ctrl_Reference/Skeleton_0010:QuickRigCharacter_Ctrl_RightAnkleEffector
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Ctrl_Reference/Skeleton_0010:QuickRigCharacter_Ctrl_RightElbowEffector
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Ctrl_Reference/Skeleton_0010:QuickRigCharacter_Ctrl_RightFootEffector
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Ctrl_Reference/Skeleton_0010:QuickRigCharacter_Ctrl_RightHipEffector
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Ctrl_Reference/Skeleton_0010:QuickRigCharacter_Ctrl_RightKneeEffector
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Ctrl_Reference/Skeleton_0010:QuickRigCharacter_Ctrl_RightShoulderEffector
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Ctrl_Reference/Skeleton_0010:QuickRigCharacter_Ctrl_RightWristEffector
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Guides
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Guides/Skeleton_0010:Head
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Guides/Skeleton_0010:Hips
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Guides/Skeleton_0010:LeftArm
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Guides/Skeleton_0010:LeftFoot
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Guides/Skeleton_0010:LeftForeArm
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Guides/Skeleton_0010:LeftHand
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Guides/Skeleton_0010:LeftLeg
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Guides/Skeleton_0010:LeftShoulder
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Guides/Skeleton_0010:LeftToeBase
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Guides/Skeleton_0010:LeftUpLeg
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Guides/Skeleton_0010:Neck
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Guides/Skeleton_0010:Reference
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Guides/Skeleton_0010:RightArm
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Guides/Skeleton_0010:RightFoot
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Guides/Skeleton_0010:RightForeArm
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Guides/Skeleton_0010:RightHand
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Guides/Skeleton_0010:RightLeg
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Guides/Skeleton_0010:RightShoulder
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Guides/Skeleton_0010:RightToeBase
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Guides/Skeleton_0010:RightUpLeg
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Guides/Skeleton_0010:Spine
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Guides/Skeleton_0010:Spine1
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Reference
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Reference/Skeleton_0010:QuickRigCharacter_Hips
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Reference/Skeleton_0010:QuickRigCharacter_Hips/Skeleton_0010:Fabric
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Reference/Skeleton_0010:QuickRigCharacter_Hips/Skeleton_0010:Fabric/Skeleton_0010:Fabric1
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Reference/Skeleton_0010:QuickRigCharacter_Hips/Skeleton_0010:Fabric/Skeleton_0010:Fabric1/Skeleton_0010:Fabric2
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Reference/Skeleton_0010:QuickRigCharacter_Hips/Skeleton_0010:QuickRigCharacter_LeftUpLeg
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Reference/Skeleton_0010:QuickRigCharacter_Hips/Skeleton_0010:QuickRigCharacter_LeftUpLeg/Skeleton_0010:QuickRigCharacter_LeftLeg
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Reference/Skeleton_0010:QuickRigCharacter_Hips/Skeleton_0010:QuickRigCharacter_LeftUpLeg/Skeleton_0010:QuickRigCharacter_LeftLeg/Skeleton_0010:QuickRigCharacter_LeftFoot
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Reference/Skeleton_0010:QuickRigCharacter_Hips/Skeleton_0010:QuickRigCharacter_LeftUpLeg/Skeleton_0010:QuickRigCharacter_LeftLeg/Skeleton_0010:QuickRigCharacter_LeftFoot/Skeleton_0010:QuickRigCharacter_LeftToeBase
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Reference/Skeleton_0010:QuickRigCharacter_Hips/Skeleton_0010:QuickRigCharacter_RightUpLeg
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Reference/Skeleton_0010:QuickRigCharacter_Hips/Skeleton_0010:QuickRigCharacter_RightUpLeg/Skeleton_0010:QuickRigCharacter_RightLeg
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Reference/Skeleton_0010:QuickRigCharacter_Hips/Skeleton_0010:QuickRigCharacter_RightUpLeg/Skeleton_0010:QuickRigCharacter_RightLeg/Skeleton_0010:QuickRigCharacter_RightFoot
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Reference/Skeleton_0010:QuickRigCharacter_Hips/Skeleton_0010:QuickRigCharacter_RightUpLeg/Skeleton_0010:QuickRigCharacter_RightLeg/Skeleton_0010:QuickRigCharacter_RightFoot/Skeleton_0010:QuickRigCharacter_RightToeBase
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Reference/Skeleton_0010:QuickRigCharacter_Hips/Skeleton_0010:QuickRigCharacter_Spine
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Reference/Skeleton_0010:QuickRigCharacter_Hips/Skeleton_0010:QuickRigCharacter_Spine/Skeleton_0010:QuickRigCharacter_Spine1
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Reference/Skeleton_0010:QuickRigCharacter_Hips/Skeleton_0010:QuickRigCharacter_Spine/Skeleton_0010:QuickRigCharacter_Spine1/Skeleton_0010:QuickRigCharacter_LeftShoulder
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Reference/Skeleton_0010:QuickRigCharacter_Hips/Skeleton_0010:QuickRigCharacter_Spine/Skeleton_0010:QuickRigCharacter_Spine1/Skeleton_0010:QuickRigCharacter_LeftShoulder/Skeleton_0010:QuickRigCharacter_LeftArm
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Reference/Skeleton_0010:QuickRigCharacter_Hips/Skeleton_0010:QuickRigCharacter_Spine/Skeleton_0010:QuickRigCharacter_Spine1/Skeleton_0010:QuickRigCharacter_LeftShoulder/Skeleton_0010:QuickRigCharacter_LeftArm/Skeleton_0010:QuickRigCharacter_LeftForeArm
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Reference/Skeleton_0010:QuickRigCharacter_Hips/Skeleton_0010:QuickRigCharacter_Spine/Skeleton_0010:QuickRigCharacter_Spine1/Skeleton_0010:QuickRigCharacter_LeftShoulder/Skeleton_0010:QuickRigCharacter_LeftArm/Skeleton_0010:QuickRigCharacter_LeftForeArm/Skeleton_0010:QuickRigCharacter_LeftHand
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Reference/Skeleton_0010:QuickRigCharacter_Hips/Skeleton_0010:QuickRigCharacter_Spine/Skeleton_0010:QuickRigCharacter_Spine1/Skeleton_0010:QuickRigCharacter_LeftShoulder/Skeleton_0010:QuickRigCharacter_LeftArm/Skeleton_0010:QuickRigCharacter_LeftForeArm/Skeleton_0010:QuickRigCharacter_LeftHand/Skeleton_0010:QuickRigCharacter_LeftHand1
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Reference/Skeleton_0010:QuickRigCharacter_Hips/Skeleton_0010:QuickRigCharacter_Spine/Skeleton_0010:QuickRigCharacter_Spine1/Skeleton_0010:QuickRigCharacter_LeftShoulder/Skeleton_0010:QuickRigCharacter_LeftArm/Skeleton_0010:QuickRigCharacter_LeftForeArm/Skeleton_0010:QuickRigCharacter_LeftHand/Skeleton_0010:QuickRigCharacter_LeftHand1/Skeleton_0010:QuickRigCharacter_LeftHand2
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Reference/Skeleton_0010:QuickRigCharacter_Hips/Skeleton_0010:QuickRigCharacter_Spine/Skeleton_0010:QuickRigCharacter_Spine1/Skeleton_0010:QuickRigCharacter_LeftShoulder/Skeleton_0010:QuickRigCharacter_LeftArm/Skeleton_0010:QuickRigCharacter_LeftForeArm/Skeleton_0010:QuickRigCharacter_LeftHand/Skeleton_0010:QuickRigCharacter_LeftHand5
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Reference/Skeleton_0010:QuickRigCharacter_Hips/Skeleton_0010:QuickRigCharacter_Spine/Skeleton_0010:QuickRigCharacter_Spine1/Skeleton_0010:QuickRigCharacter_LeftShoulder/Skeleton_0010:QuickRigCharacter_LeftArm/Skeleton_0010:QuickRigCharacter_LeftForeArm/Skeleton_0010:QuickRigCharacter_LeftHand/Skeleton_0010:QuickRigCharacter_LeftHand5/Skeleton_0010:QuickRigCharacter_LeftHand4
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Reference/Skeleton_0010:QuickRigCharacter_Hips/Skeleton_0010:QuickRigCharacter_Spine/Skeleton_0010:QuickRigCharacter_Spine1/Skeleton_0010:QuickRigCharacter_Neck
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Reference/Skeleton_0010:QuickRigCharacter_Hips/Skeleton_0010:QuickRigCharacter_Spine/Skeleton_0010:QuickRigCharacter_Spine1/Skeleton_0010:QuickRigCharacter_Neck/Skeleton_0010:beard1
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Reference/Skeleton_0010:QuickRigCharacter_Hips/Skeleton_0010:QuickRigCharacter_Spine/Skeleton_0010:QuickRigCharacter_Spine1/Skeleton_0010:QuickRigCharacter_Neck/Skeleton_0010:beard1/Skeleton_0010:beard2
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Reference/Skeleton_0010:QuickRigCharacter_Hips/Skeleton_0010:QuickRigCharacter_Spine/Skeleton_0010:QuickRigCharacter_Spine1/Skeleton_0010:QuickRigCharacter_Neck/Skeleton_0010:beard1/Skeleton_0010:beard2/Skeleton_0010:beard3
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Reference/Skeleton_0010:QuickRigCharacter_Hips/Skeleton_0010:QuickRigCharacter_Spine/Skeleton_0010:QuickRigCharacter_Spine1/Skeleton_0010:QuickRigCharacter_Neck/Skeleton_0010:beard1/Skeleton_0010:beard2/Skeleton_0010:beard3/Skeleton_0010:beard4
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Reference/Skeleton_0010:QuickRigCharacter_Hips/Skeleton_0010:QuickRigCharacter_Spine/Skeleton_0010:QuickRigCharacter_Spine1/Skeleton_0010:QuickRigCharacter_Neck/Skeleton_0010:QuickRigCharacter_Head
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Reference/Skeleton_0010:QuickRigCharacter_Hips/Skeleton_0010:QuickRigCharacter_Spine/Skeleton_0010:QuickRigCharacter_Spine1/Skeleton_0010:QuickRigCharacter_Neck/Skeleton_0010:QuickRigCharacter_Head/Mask2:mask2
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Reference/Skeleton_0010:QuickRigCharacter_Hips/Skeleton_0010:QuickRigCharacter_Spine/Skeleton_0010:QuickRigCharacter_Spine1/Skeleton_0010:QuickRigCharacter_Neck/Skeleton_0010:QuickRigCharacter_Head/Skeleton_0010:helmetfabric
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Reference/Skeleton_0010:QuickRigCharacter_Hips/Skeleton_0010:QuickRigCharacter_Spine/Skeleton_0010:QuickRigCharacter_Spine1/Skeleton_0010:QuickRigCharacter_Neck/Skeleton_0010:QuickRigCharacter_Head/Skeleton_0010:helmetfabric/Skeleton_0010:helmetfabric3
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Reference/Skeleton_0010:QuickRigCharacter_Hips/Skeleton_0010:QuickRigCharacter_Spine/Skeleton_0010:QuickRigCharacter_Spine1/Skeleton_0010:QuickRigCharacter_Neck/Skeleton_0010:QuickRigCharacter_Head/Skeleton_0010:helmetfabric/Skeleton_0010:helmetfabric3/Skeleton_0010:helmetfabric7
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Reference/Skeleton_0010:QuickRigCharacter_Hips/Skeleton_0010:QuickRigCharacter_Spine/Skeleton_0010:QuickRigCharacter_Spine1/Skeleton_0010:QuickRigCharacter_Neck/Skeleton_0010:QuickRigCharacter_Head/Skeleton_0010:helmetfabric1
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Reference/Skeleton_0010:QuickRigCharacter_Hips/Skeleton_0010:QuickRigCharacter_Spine/Skeleton_0010:QuickRigCharacter_Spine1/Skeleton_0010:QuickRigCharacter_Neck/Skeleton_0010:QuickRigCharacter_Head/Skeleton_0010:helmetfabric1/Skeleton_0010:helmetfabric4
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Reference/Skeleton_0010:QuickRigCharacter_Hips/Skeleton_0010:QuickRigCharacter_Spine/Skeleton_0010:QuickRigCharacter_Spine1/Skeleton_0010:QuickRigCharacter_Neck/Skeleton_0010:QuickRigCharacter_Head/Skeleton_0010:helmetfabric1/Skeleton_0010:helmetfabric4/Skeleton_0010:helmetfabric8
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Reference/Skeleton_0010:QuickRigCharacter_Hips/Skeleton_0010:QuickRigCharacter_Spine/Skeleton_0010:QuickRigCharacter_Spine1/Skeleton_0010:QuickRigCharacter_Neck/Skeleton_0010:QuickRigCharacter_Head/Skeleton_0010:helmetfabric2
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Reference/Skeleton_0010:QuickRigCharacter_Hips/Skeleton_0010:QuickRigCharacter_Spine/Skeleton_0010:QuickRigCharacter_Spine1/Skeleton_0010:QuickRigCharacter_Neck/Skeleton_0010:QuickRigCharacter_Head/Skeleton_0010:helmetfabric2/Skeleton_0010:helmetfabric5
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Reference/Skeleton_0010:QuickRigCharacter_Hips/Skeleton_0010:QuickRigCharacter_Spine/Skeleton_0010:QuickRigCharacter_Spine1/Skeleton_0010:QuickRigCharacter_Neck/Skeleton_0010:QuickRigCharacter_Head/Skeleton_0010:helmetfabric2/Skeleton_0010:helmetfabric5/Skeleton_0010:helmetfabric6
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Reference/Skeleton_0010:QuickRigCharacter_Hips/Skeleton_0010:QuickRigCharacter_Spine/Skeleton_0010:QuickRigCharacter_Spine1/Skeleton_0010:QuickRigCharacter_RightShoulder
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Reference/Skeleton_0010:QuickRigCharacter_Hips/Skeleton_0010:QuickRigCharacter_Spine/Skeleton_0010:QuickRigCharacter_Spine1/Skeleton_0010:QuickRigCharacter_RightShoulder/Skeleton_0010:QuickRigCharacter_RightArm
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Reference/Skeleton_0010:QuickRigCharacter_Hips/Skeleton_0010:QuickRigCharacter_Spine/Skeleton_0010:QuickRigCharacter_Spine1/Skeleton_0010:QuickRigCharacter_RightShoulder/Skeleton_0010:QuickRigCharacter_RightArm/Skeleton_0010:QuickRigCharacter_RightForeArm
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Reference/Skeleton_0010:QuickRigCharacter_Hips/Skeleton_0010:QuickRigCharacter_Spine/Skeleton_0010:QuickRigCharacter_Spine1/Skeleton_0010:QuickRigCharacter_RightShoulder/Skeleton_0010:QuickRigCharacter_RightArm/Skeleton_0010:QuickRigCharacter_RightForeArm/Skeleton_0010:QuickRigCharacter_RightHand
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Reference/Skeleton_0010:QuickRigCharacter_Hips/Skeleton_0010:QuickRigCharacter_Spine/Skeleton_0010:QuickRigCharacter_Spine1/Skeleton_0010:QuickRigCharacter_RightShoulder/Skeleton_0010:QuickRigCharacter_RightArm/Skeleton_0010:QuickRigCharacter_RightForeArm/Skeleton_0010:QuickRigCharacter_RightHand/Skeleton_0010:QuickRigCharacter_RightHand1
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Reference/Skeleton_0010:QuickRigCharacter_Hips/Skeleton_0010:QuickRigCharacter_Spine/Skeleton_0010:QuickRigCharacter_Spine1/Skeleton_0010:QuickRigCharacter_RightShoulder/Skeleton_0010:QuickRigCharacter_RightArm/Skeleton_0010:QuickRigCharacter_RightForeArm/Skeleton_0010:QuickRigCharacter_RightHand/Skeleton_0010:QuickRigCharacter_RightHand1/Skeleton_0010:QuickRigCharacter_RightHand2
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Reference/Skeleton_0010:QuickRigCharacter_Hips/Skeleton_0010:QuickRigCharacter_Spine/Skeleton_0010:QuickRigCharacter_Spine1/Skeleton_0010:QuickRigCharacter_RightShoulder/Skeleton_0010:QuickRigCharacter_RightArm/Skeleton_0010:QuickRigCharacter_RightForeArm/Skeleton_0010:QuickRigCharacter_RightHand/Skeleton_0010:QuickRigCharacter_RightHand5
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Reference/Skeleton_0010:QuickRigCharacter_Hips/Skeleton_0010:QuickRigCharacter_Spine/Skeleton_0010:QuickRigCharacter_Spine1/Skeleton_0010:QuickRigCharacter_RightShoulder/Skeleton_0010:QuickRigCharacter_RightArm/Skeleton_0010:QuickRigCharacter_RightForeArm/Skeleton_0010:QuickRigCharacter_RightHand/Skeleton_0010:QuickRigCharacter_RightHand5/Skeleton_0010:QuickRigCharacter_RightHand4
+    m_Weight: 1
+  - m_Path: Skeleton_0010:QuickRigCharacter_Reference/Skeleton_0010:QuickRigCharacter_Hips/Skeleton_0010:QuickRigCharacter_Spine/Skeleton_0010:QuickRigCharacter_Spine1/Skeleton_0010:QuickRigCharacter_RightShoulder/Skeleton_0010:QuickRigCharacter_RightArm/Skeleton_0010:QuickRigCharacter_RightForeArm/Skeleton_0010:QuickRigCharacter_RightHand/Swordjoint
+    m_Weight: 1
+  - m_Path: spear:spear
+    m_Weight: 1
