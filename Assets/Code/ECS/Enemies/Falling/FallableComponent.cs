@@ -1,12 +1,10 @@
 using Code.Abstract.Interfaces;
 using Unity.Entities;
 
-namespace Code.ECS.Enemies.Fallable
+namespace Code.ECS.Enemies.Falling
 {
     public struct FallableComponent : IComponentData, IEntityFeature, IEnableableComponent
     {
-        public float TimeInAir;
-        
         public void Compose(IBaker baker, Entity entity)
         {
             baker.AddComponent(entity, this);

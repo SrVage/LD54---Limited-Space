@@ -18,13 +18,13 @@ namespace Code.ECS.Moving
                 typeof(PhysicsVelocity),
                 typeof(EnemyComponent),
                 typeof(TargetableComponent),
-                typeof(Rotatable)));
+                typeof(RotatableComponent)));
         }
         
         [BurstCompile]
         public void OnUpdate(ref SystemState state)
         {
-            foreach (var (localTransform, rotatable, targetable) in SystemAPI.Query<RefRW<LocalTransform>, RefRO<Rotatable>, RefRO<TargetableComponent>>().WithAll<EnemyComponent>())
+            foreach (var (localTransform, rotatable, targetable) in SystemAPI.Query<RefRW<LocalTransform>, RefRO<RotatableComponent>, RefRO<TargetableComponent>>().WithAll<EnemyComponent>())
             {
                 var targetLocalTransform = SystemAPI.GetComponentRO<LocalTransform>(targetable.ValueRO.Target);
 
