@@ -12,12 +12,11 @@ using Unity.Jobs;
 using Unity.Mathematics;
 using Unity.Physics;
 using Unity.Transforms;
-using UnityEngine;
 
 namespace Code.ECS.Tiles.Systems
 {
     [UpdateBefore(typeof(PlayerMoveSystem))]
-    public partial struct ChangePlayerMultiplyerSystem:ISystem
+    public partial struct CheckActivityTilesSystem:ISystem
     {
         public void OnCreate(ref SystemState state)
         {
@@ -49,6 +48,14 @@ namespace Code.ECS.Tiles.Systems
                        ecb.AddComponent(entity, new MultiplyComponent()
                        {
                            Value = multiplier
+                       });
+                   }
+                   if (state.EntityManager.HasComponent<DamageComponent>(comp.Entity)&&state.EntityManager.IsComponentEnabled<DamageComponent>(comp.Entity))
+                   {
+                       var damage = state.EntityManager.GetComponentData<DamageComponent>(comp.Entity).Value;
+                       ecb.AddComponent(entity, new HitComponent()
+                       {
+                           Value = damage
                        });
                    }
                 }

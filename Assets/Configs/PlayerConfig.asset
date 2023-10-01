@@ -16,6 +16,7 @@ MonoBehaviour:
   _features:
   - rid: 160921251216883713
   - rid: 160921251216883712
+  - rid: 160921253962842118
   references:
     version: 2
     RefIds:
@@ -26,3 +27,7 @@ MonoBehaviour:
       type: {class: SpeedComponent, ns: Code.ECS.CommonComponents, asm: Assembly-CSharp}
       data:
         Value: 5
+    - rid: 160921253962842118
+      type: {class: HealthComponent, ns: Code.ECS.Player.Components, asm: Assembly-CSharp}
+      data:
+        Value: 100
