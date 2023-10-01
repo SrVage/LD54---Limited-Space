@@ -15,11 +15,15 @@ MonoBehaviour:
   <Name>k__BackingField: Wall
   _features:
   - rid: 6568860289326383109
-  - rid: 6568860289326383111
+  - rid: 160921253962842129
   - rid: 6568860289326383114
   references:
     version: 2
     RefIds:
+    - rid: 160921253962842129
+      type: {class: SpeedComponent, ns: Code.ECS.CommonComponents, asm: Assembly-CSharp}
+      data:
+        Value: 0.1
     - rid: 6568860289326383109
       type: {class: MoveDirectionComponent, ns: Code.ECS.Wall.Components, asm: Assembly-CSharp}
       data:
@@ -27,10 +31,6 @@ MonoBehaviour:
           x: 0
           y: 0
           z: -1
-    - rid: 6568860289326383111
-      type: {class: SpeedComponent, ns: Code.ECS.CommonComponents, asm: Assembly-CSharp}
-      data:
-        Value: 0.2
     - rid: 6568860289326383114
       type: {class: BordersPositionComponent, ns: Code.ECS.Wall.Components, asm: Assembly-CSharp}
       data:

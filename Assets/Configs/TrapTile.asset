@@ -16,6 +16,7 @@ MonoBehaviour:
   _features:
   - rid: 160921253962842114
   - rid: 160921253962842120
+  - rid: 160921253962842128
   references:
     version: 2
     RefIds:
@@ -26,3 +27,9 @@ MonoBehaviour:
       type: {class: DamageComponent, ns: Code.ECS.Tiles.Components, asm: Assembly-CSharp}
       data:
         Value: 5
+    - rid: 160921253962842128
+      type: {class: ArrowsCycleComponent, ns: Code.ECS.Tiles.Components, asm: Assembly-CSharp}
+      data:
+        AttackTime: 2
+        SafeTime: 4
+        Reverse: 0
