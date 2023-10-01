@@ -13,7 +13,19 @@ MonoBehaviour:
   m_Name: SimpleTile
   m_EditorClassIdentifier: 
   <Name>k__BackingField: 
-  _features: []
+  _features:
+  - rid: 6923755597894516744
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 6923755597894516744
+      type: {class: EnemySpawnPointComponent, ns: Code.ECS.Enemies.Spawn, asm: Assembly-CSharp}
+      data:
+        OffsetFromOriginalEntity:
+          x: 0
+          y: 5
+          z: 0
+        EndValue:
+          x: 0
+          y: 0
+          z: 0
