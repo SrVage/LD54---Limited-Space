@@ -20,6 +20,11 @@ namespace Code.Services
             _diContainer = diContainer;
             _uiTag = uiTag;
             _uiConfig = uiConfig;
+
+            if (_uiTag == null)
+            {
+                _uiTag = GameObject.Instantiate(_uiConfig.MainUI);
+            }
         }
     
         public T InstantiateView<T>() where T : BaseView<T>
