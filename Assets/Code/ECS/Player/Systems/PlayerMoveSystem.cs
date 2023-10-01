@@ -25,7 +25,6 @@ namespace Code.ECS.Player.Systems
         {
             EntityCommandBuffer ecb = new EntityCommandBuffer(Allocator.Temp);
             var direction = SystemAPI.GetSingleton<InputDirectionComponent>().Value;
-            var sprint = SystemAPI.GetSingleton<InputDirectionComponent>().Sprint;
             foreach (var entity in SystemAPI.Query<MovePlayerAspect>().WithAll<PlayerComponent>())
             {
                 entity.Move(direction, state.EntityManager, ecb);
