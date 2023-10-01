@@ -3,6 +3,7 @@ using Code.ECS.CommonComponents;
 using Code.ECS.Player.Components;
 using Code.ECS.States.Components;
 using Unity.Burst;
+using Unity.Collections;
 using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Physics;
@@ -22,12 +23,15 @@ namespace Code.ECS.Player.Systems
 
         public void OnUpdate(ref SystemState state)
         {
+            EntityCommandBuffer ecb = new EntityCommandBuffer(Allocator.Temp);
             var direction = SystemAPI.GetSingleton<InputDirectionComponent>().Value;
             var sprint = SystemAPI.GetSingleton<InputDirectionComponent>().Sprint;
             foreach (var entity in SystemAPI.Query<MovePlayerAspect>().WithAll<PlayerComponent>())
             {
-                entity.Move(direction);
+                entity.Move(direction, state.EntityManager, ecb);
             }
+            ecb.Playback(state.EntityManager);
+            ecb.Dispose();
         }
     }
 
@@ -37,10 +41,17 @@ namespace Code.ECS.Player.Systems
         private readonly RefRW<LocalTransform> _transform;
         private readonly RefRO<SpeedComponent> _speed;
         private readonly RefRW<PhysicsVelocity> _velocity;
+        private readonly Entity _entity;
 
-        public void Move(float2 direction)
+        public void Move(float2 direction, EntityManager entityManager, EntityCommandBuffer ecb)
         {
-            var speed = _speed.ValueRO.Value;
+            float multiply = 1;
+            if (entityManager.HasComponent<MultiplyComponent>(_entity))
+            {
+                multiply = entityManager.GetComponentData<MultiplyComponent>(_entity).Value;
+                ecb.RemoveComponent<MultiplyComponent>(_entity);
+            }
+            var speed = _speed.ValueRO.Value*multiply;
             _velocity.ValueRW.Linear = new float3(direction.x, 0, direction.y) * speed;
             if (direction.x != 0 && direction.y != 0)
             {

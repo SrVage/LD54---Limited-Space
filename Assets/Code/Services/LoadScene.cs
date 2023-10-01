@@ -1,6 +1,7 @@
 ﻿using Code.Abstract.Enums;
 using Code.ECS.States.Components;
 using Unity.Entities;
+using Unity.Scenes;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
