@@ -49,6 +49,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EntityTemplate: {fileID: 11400000, guid: 0129715e89e1056469c415a55a32df9a, type: 2}
+  Features: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!114 &2218092701525391643
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -12,17 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c01bcffcd2c4c65b3a67648ac50d8cf, type: 3}
   m_Name: TrapTile
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: SpeedDecreaseTile
+  <Name>k__BackingField: TrapTile
   _features:
-  - rid: 160921253962842113
   - rid: 160921253962842114
+  - rid: 160921253962842120
   references:
     version: 2
     RefIds:
-    - rid: 160921253962842113
-      type: {class: SpeedMultiplyer, ns: Code.ECS.Tiles.Components, asm: Assembly-CSharp}
-      data:
-        Value: 0.2
     - rid: 160921253962842114
       type: {class: ActiveTileTag, ns: Code.ECS.Tiles.Components, asm: Assembly-CSharp}
       data: 
+    - rid: 160921253962842120
+      type: {class: DamageComponent, ns: Code.ECS.Tiles.Components, asm: Assembly-CSharp}
+      data:
+        Value: 5
