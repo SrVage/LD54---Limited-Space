@@ -22,6 +22,7 @@ namespace Code.LevelLoader.System
            _playerSpawnedQuery = state.World.EntityManager.CreateEntityQuery(spawnedPlayer);
            
             state.RequireForUpdate<PlayerSpawnComponent>();
+            state.RequireForUpdate<SpawnPointComponent>();
         }
 
         [BurstCompile]

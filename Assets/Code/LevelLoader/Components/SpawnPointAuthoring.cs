@@ -18,6 +18,7 @@ namespace Code.LevelLoader.Components
     {
         public override void Bake(SpawnPointAuthoring authoring)
         {
+            Debug.Log("");
             var entity = GetEntity(TransformUsageFlags.Dynamic);
             AddComponent(entity, new SpawnPointComponent(){Position = authoring.transform.position });
         }
