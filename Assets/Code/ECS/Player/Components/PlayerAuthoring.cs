@@ -6,7 +6,7 @@ namespace Code.ECS.Player.Components
 {
     public class PlayerAuthoring : MonoBehaviour
     {
-        public CommonComponents[] Components;
+        public Common.CommonComponents[] Components;
     }
     
     public struct PlayerComponent:IComponentData

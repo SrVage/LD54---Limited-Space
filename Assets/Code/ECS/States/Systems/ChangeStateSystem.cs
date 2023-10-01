@@ -2,12 +2,13 @@
 using Code.Abstract.Enums;
 using Code.ECS.States.Components;
 using Unity.Entities;
+using UnityEngine;
+
 
 namespace Code.ECS.States.Systems
 {
     public partial struct ChangeStateSystem:ISystem
     {
-        
         public void OnCreate(ref SystemState state)
         {
             var stateEntity = state.EntityManager.CreateEntity();
@@ -45,6 +46,8 @@ namespace Code.ECS.States.Systems
                     throw new ArgumentOutOfRangeException();
             }
             state.EntityManager.DestroyEntity(SystemAPI.GetSingletonEntity<ChangeState>());
+            
+            Debug.Log(newState);
         }
     }
 }
