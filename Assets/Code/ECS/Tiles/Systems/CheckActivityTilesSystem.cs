@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Code.ECS.CommonComponents;
 using Code.ECS.Enemies;
 using Code.ECS.Player.Components;
@@ -52,11 +53,27 @@ namespace Code.ECS.Tiles.Systems
                    }
                    if (state.EntityManager.HasComponent<DamageComponent>(comp.Entity)&&state.EntityManager.IsComponentEnabled<DamageComponent>(comp.Entity))
                    {
-                       var damage = state.EntityManager.GetComponentData<DamageComponent>(comp.Entity).Value;
-                       ecb.AddComponent(entity, new HitComponent()
+                       var damagedEntities = state.EntityManager.GetBuffer<DamagedEntityBuffer>(comp.Entity);
+                       var isNewEntity = true;
+
+                       foreach (var damagedEntityBuffer in damagedEntities)
                        {
-                           Value = damage
-                       });
+                           if (damagedEntityBuffer.Entity == entity)
+                           {
+                               isNewEntity = false;
+                               break;
+                           }
+                       }
+
+                       if (isNewEntity)
+                       {
+                           var damage = state.EntityManager.GetComponentData<DamageComponent>(comp.Entity).Value;
+                           ecb.AppendToBuffer(comp.Entity, new DamagedEntityBuffer {Entity = entity});
+                           ecb.AddComponent(entity, new HitComponent()
+                           {
+                               Value = damage
+                           });
+                       }
                    }
                 }
             }

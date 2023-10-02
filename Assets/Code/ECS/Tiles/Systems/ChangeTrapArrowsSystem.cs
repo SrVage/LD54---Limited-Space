@@ -26,10 +26,16 @@ namespace Code.ECS.Tiles.Systems
                 var transform = SystemAPI.GetComponentRW<LocalTransform>(arrow.ValueRO.Value);
                 transform.ValueRW.Position = new float3(transform.ValueRO.Position.x, cycle.ValueRO.Reverse ? -1 : 0,
                     transform.ValueRO.Position.z);
+                
                 ecb.AddComponent(entity, new ArrowsTimerComponent()
                 {
                     Value = cycle.ValueRO.Reverse?cycle.ValueRO.SafeTime:cycle.ValueRO.AttackTime
                 });
+
+                if (!cycle.ValueRO.Reverse && state.EntityManager.HasBuffer<DamagedEntityBuffer>(entity))
+                {
+                    state.EntityManager.GetBuffer<DamagedEntityBuffer>(entity).Clear();
+                }
             }
             ecb.Playback(state.EntityManager);
             ecb.Dispose();

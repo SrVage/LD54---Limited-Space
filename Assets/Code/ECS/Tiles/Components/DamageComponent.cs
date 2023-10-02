@@ -10,12 +10,19 @@ namespace Code.ECS.Tiles.Components
         {
             baker.AddComponent(entity, this);
             baker.SetComponentEnabled<DamageComponent>(entity, false);
+            baker.AddBuffer<DamagedEntityBuffer>(entity);
         }
 
         public void Compose(EntityCommandBuffer entityCommandBuffer, Entity entity)
         {
             entityCommandBuffer.AddComponent(entity, this);
             entityCommandBuffer.SetComponentEnabled<DamageComponent>(entity, false);
+            entityCommandBuffer.AddBuffer<DamagedEntityBuffer>(entity);
         }
+    }
+
+    public struct DamagedEntityBuffer : IBufferElementData
+    {
+        public Entity Entity;
     }
 }
