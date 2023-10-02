@@ -1,8 +1,11 @@
-﻿using Code.ECS.Enemies.Spawn;
+﻿using Code.ECS.Common.References;
+using Code.ECS.Enemies.Spawn;
 using Code.MapGenerator.Components;
+using Code.Services;
 using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Transforms;
+using UnityEngine;
 using Random = UnityEngine.Random;
 
 namespace Code.MapGenerator.Systems
@@ -60,6 +63,10 @@ namespace Code.MapGenerator.Systems
                                 {
                                     counts.y++;
                                     tile = state.EntityManager.Instantiate(tiles.ValueRO.SpeedDecreaseTilePrefab);
+                                    foreach (var configReferenceService in SystemAPI.Query<ReferenceConfigReferenceService>())
+                                    {
+                                        Object.Instantiate(configReferenceService.Value.EffectsConfig.SandPrefab, new Vector3(2*i+Random.Range(-0.5f, 0.5f), 5, 2*j+Random.Range(-0.5f, 0.5f)), Quaternion.identity);
+                                    }
                                 }
                             }
                             else if (randomTile >= percents.x+percents.y && randomTile<percents.x+percents.y+percents.z)

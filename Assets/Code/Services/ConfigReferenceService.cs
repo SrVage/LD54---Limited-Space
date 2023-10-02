@@ -10,13 +10,14 @@ namespace Code.Services
     {
         public UIConfig UIConfig { get; }
         public LevelConfig LevelConfig { get; }
+        public EffectsConfig EffectsConfig { get; }
 
         [Inject]
-        public ConfigReferenceService(LevelConfig levelConfig, UIConfig uiConfig)
+        public ConfigReferenceService(LevelConfig levelConfig, UIConfig uiConfig, EffectsConfig effectsConfig)
         {
             UIConfig = uiConfig;
             LevelConfig = levelConfig;
-            
+            EffectsConfig = effectsConfig;
             var entity = World.DefaultGameObjectInjectionWorld.EntityManager.CreateEntity();
             World.DefaultGameObjectInjectionWorld.EntityManager.AddComponent<ReferenceConfigReferenceService>(entity);
             World.DefaultGameObjectInjectionWorld.EntityManager.SetComponentData(entity, new ReferenceConfigReferenceService()

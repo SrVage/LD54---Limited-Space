@@ -12,6 +12,7 @@ namespace Code.Configs
             Container.Bind<AudioConfig>().FromInstance(_configsSingle.AudioConfig).AsSingle().NonLazy();
             Container.Bind<UIConfig>().FromInstance(_configsSingle.UIConfig).AsSingle().NonLazy();
             Container.Bind<LevelConfig>().FromInstance(_configsSingle.LevelConfig).AsSingle().NonLazy();
+            Container.Bind<EffectsConfig>().FromInstance(_configsSingle.EffectsConfig).AsSingle().NonLazy();
         }
 
         private void Awake()

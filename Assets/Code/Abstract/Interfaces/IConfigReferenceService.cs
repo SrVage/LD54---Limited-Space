@@ -6,5 +6,6 @@ namespace Code.Abstract.Interfaces
     {
         UIConfig UIConfig { get; }
         LevelConfig LevelConfig { get; }
+        EffectsConfig EffectsConfig { get; }
     }
 }

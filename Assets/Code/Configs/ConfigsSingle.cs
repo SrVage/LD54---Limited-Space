@@ -11,6 +11,7 @@ namespace Code.Configs
         [field: SerializeField] public LevelConfig LevelConfig { private set; get; }
         [field: SerializeField] public UIConfig UIConfig { private set; get; }
         [field: SerializeField] public AudioConfig AudioConfig { private set; get; }
+        [field: SerializeField] public EffectsConfig EffectsConfig { private set; get; }
         
         public static void Init(ConfigsSingle configsSingle)
         {

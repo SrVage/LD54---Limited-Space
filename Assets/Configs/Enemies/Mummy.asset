@@ -21,15 +21,16 @@ MonoBehaviour:
   - rid: 4591153334565994499
   - rid: 6923755597894516750
   - rid: 6923755604152418309
-  - rid: 6923755604152418313
+  - rid: 160921276206022658
   - rid: 6923755604152418317
   references:
     version: 2
     RefIds:
-    - rid: 160921253962842140
-      type: {class: HealthComponent, ns: Code.ECS.Player.Components, asm: Assembly-CSharp}
+    - rid: 160921276206022658
+      type: {class: SpeedComponent, ns: Code.ECS.CommonComponents, asm: Assembly-CSharp}
       data:
-        Value: 70
+        Value: 2
+        Multiply: 1
     - rid: 4591153330052399104
       type: {class: EnemyComponent, ns: Code.ECS.Enemies, asm: Assembly-CSharp}
       data: 
@@ -57,11 +58,6 @@ MonoBehaviour:
         Damage: 10
         MaxCooldown: 2
         CurrentCooldown: 0
-    - rid: 6923755604152418313
-      type: {class: SpeedComponent, ns: Code.ECS.CommonComponents, asm: Assembly-CSharp}
-      data:
-        Value: 3
-        Multiply: 1
     - rid: 6923755604152418317
       type: {class: HealthComponent, ns: Code.ECS.Player.Components, asm: Assembly-CSharp}
       data:

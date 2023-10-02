@@ -18,3 +18,5 @@ MonoBehaviour:
     type: 2}
   <AudioConfig>k__BackingField: {fileID: 11400000, guid: 5c0785f6c929e234ebc7e188fce2ef06,
     type: 2}
+  <EffectsConfig>k__BackingField: {fileID: 11400000, guid: 7f4874b0504454c468e8f7c0596dbd8a,
+    type: 2}
