@@ -33,7 +33,7 @@ namespace Code.ECS.Animations.Systems
         {
             foreach (var (animation, velocity) in SystemAPI.Query<AnimatorParametersAspect, PhysicsVelocity>().WithAll<EnemyComponent>())
             {
-                animation.SetParameterValue(_transitionHash, math.length(velocity.Linear)>0.5f);
+                animation.SetParameterValue(_transitionHash, math.length(velocity.Linear)>0.2f);
             }
             /*foreach (var player in SystemAPI.Query<AnimatorParametersAspect>().WithAll<PlayerComponent>().WithAll<AttackEvent>())
             {

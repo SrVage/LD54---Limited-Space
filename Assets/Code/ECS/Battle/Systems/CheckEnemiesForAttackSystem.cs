@@ -1,4 +1,5 @@
 ﻿using Code.ECS.Player.Components;
+using Code.ECS.Wall.Components;
 using Unity.Collections;
 using Unity.Entities;
 using Unity.Mathematics;
@@ -9,6 +10,14 @@ namespace Code.ECS.Battle.Systems
 {
     public partial struct CheckEnemiesForAttackSystem:ISystem
     {
+        private const float ReturnTimeForKill = 0.5f;
+        private EntityQuery _returnTimer;
+
+        public void OnCreate(ref SystemState state)
+        {
+            _returnTimer = SystemAPI.QueryBuilder().WithAll<ReturnWallTimer>().Build();
+        }
+
         public void OnUpdate(ref SystemState state)
         {
             EntityCommandBuffer ecb = new EntityCommandBuffer(Allocator.Temp);
@@ -30,6 +39,21 @@ namespace Code.ECS.Battle.Systems
                     if (hp.ValueRO.Value <= 0)
                     {
                         ecb.DestroyEntity(entity);
+                        if (!_returnTimer.IsEmpty)
+                        {
+                            var timer = SystemAPI.GetSingleton<ReturnWallTimer>().Value;
+                            SystemAPI.SetSingleton(new ReturnWallTimer()
+                            {
+                                Value = timer+ReturnTimeForKill
+                            });
+                        }
+                        else
+                        {
+                            var entityTimer = ecb.CreateEntity();
+                            ecb.AddComponent<ReturnWallTimer>(entityTimer);
+                            ecb.SetComponent(entityTimer, new ReturnWallTimer(){Value = ReturnTimeForKill});
+                        }
+                        break;
                     }
                 }
             }
