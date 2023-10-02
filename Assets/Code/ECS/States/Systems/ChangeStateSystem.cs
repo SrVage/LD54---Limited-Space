@@ -11,9 +11,6 @@ namespace Code.ECS.States.Systems
     {
         public void OnCreate(ref SystemState state)
         {
-            var stateEntity = state.EntityManager.CreateEntity();
-            state.EntityManager.AddComponent<MainState>(stateEntity);
-            state.EntityManager.AddComponent<MenuState>(stateEntity);
             state.RequireForUpdate<ChangeState>();
             state.RequireForUpdate<MainState>();
         }

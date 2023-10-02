@@ -21,13 +21,6 @@ namespace Code.Services
         {
             if (arg0.buildIndex!=1)
                 return;
-            World.DefaultGameObjectInjectionWorld.EntityManager.AddComponent<MainState>(World.DefaultGameObjectInjectionWorld.EntityManager.CreateEntity());
-            var stateEntity = World.DefaultGameObjectInjectionWorld.EntityManager.CreateEntity();
-            World.DefaultGameObjectInjectionWorld.EntityManager.AddComponent<ChangeState>(stateEntity);
-            World.DefaultGameObjectInjectionWorld.EntityManager.SetComponentData(stateEntity, new ChangeState()
-            {
-                Value = State.MenuState
-            });
             //SceneManager.LoadScene(2,LoadSceneMode.Additive);
         }
 
