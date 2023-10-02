@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 32d5022a56187ee4ea6ba10eae246569
+timeCreated: 1425440388
+licenseType: Store
+TextScriptImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 241472
+  packageName: Rukhanka - ECS Animation System
+  packageVersion: 1.4.0
+  assetPath: Packages/com.rk.rukhanka/Samples~/Samples/TextMesh Pro/Resources/LineBreaking
+    Leading Characters.txt
+  uploadId: 616667

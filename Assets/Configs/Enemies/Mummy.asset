@@ -20,6 +20,9 @@ MonoBehaviour:
   - rid: 6923755597894516749
   - rid: 4591153334565994499
   - rid: 6923755597894516750
+  - rid: 6923755604152418309
+  - rid: 6923755604152418313
+  - rid: 6923755604152418317
   references:
     version: 2
     RefIds:
@@ -31,14 +34,31 @@ MonoBehaviour:
       data: 
     - rid: 4591153334565994497
       type: {class: MovableComponent, ns: Code.ECS.Moving, asm: Assembly-CSharp}
-      data:
-        Speed: 5
+      data: 
     - rid: 4591153334565994499
       type: {class: TargetableComponent, ns: Code.ECS.Enemies.Targeting, asm: Assembly-CSharp}
-      data: 
+      data:
+        Distance: 0
     - rid: 6923755597894516749
       type: {class: RotatableComponent, ns: Code.ECS.Moving, asm: Assembly-CSharp}
       data: 
     - rid: 6923755597894516750
       type: {class: FallableComponent, ns: Code.ECS.Enemies.Falling, asm: Assembly-CSharp}
       data: 
+    - rid: 6923755604152418309
+      type: {class: AttackableComponent, ns: Code.ECS.Enemies.Attacking, asm: Assembly-CSharp}
+      data:
+        Distance: 1
+        StoppingDistance: 0.75
+        Damage: 10
+        MaxCooldown: 2
+        CurrentCooldown: 0
+    - rid: 6923755604152418313
+      type: {class: SpeedComponent, ns: Code.ECS.CommonComponents, asm: Assembly-CSharp}
+      data:
+        Value: 3
+        Multiply: 1
+    - rid: 6923755604152418317
+      type: {class: HealthComponent, ns: Code.ECS.Player.Components, asm: Assembly-CSharp}
+      data:
+        Value: 5

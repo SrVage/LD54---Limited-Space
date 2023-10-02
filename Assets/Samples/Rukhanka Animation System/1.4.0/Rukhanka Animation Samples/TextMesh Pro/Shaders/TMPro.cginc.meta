@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 33af50ce10d5e8a4298a474634ef48fe
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 241472
+  packageName: Rukhanka - ECS Animation System
+  packageVersion: 1.4.0
+  assetPath: Packages/com.rk.rukhanka/Samples~/Samples/TextMesh Pro/Shaders/TMPro.cginc
+  uploadId: 616667

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 27a38355253297a4383a8b741cd907f0
+timeCreated: 1436653997
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 241472
+  packageName: Rukhanka - ECS Animation System
+  packageVersion: 1.4.0
+  assetPath: Packages/com.rk.rukhanka/Samples~/Samples/TextMesh Pro/Resources/TMP
+    Settings.asset
+  uploadId: 616667

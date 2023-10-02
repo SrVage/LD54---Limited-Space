@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 93509e500bdb86e4683e212a02b17b74
+timeCreated: 1484171296
+licenseType: Store
+TextScriptImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 241472
+  packageName: Rukhanka - ECS Animation System
+  packageVersion: 1.4.0
+  assetPath: Packages/com.rk.rukhanka/Samples~/Samples/TextMesh Pro/Fonts/LiberationSans
+    - OFL.txt
+  uploadId: 616667

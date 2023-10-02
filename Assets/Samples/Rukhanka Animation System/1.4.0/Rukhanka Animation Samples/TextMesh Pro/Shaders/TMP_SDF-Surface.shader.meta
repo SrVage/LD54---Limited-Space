@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 0a7be4c6c54a949459fa38d1a47313f1
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 241472
+  packageName: Rukhanka - ECS Animation System
+  packageVersion: 1.4.0
+  assetPath: Packages/com.rk.rukhanka/Samples~/Samples/TextMesh Pro/Shaders/TMP_SDF-Surface.shader
+  uploadId: 616667

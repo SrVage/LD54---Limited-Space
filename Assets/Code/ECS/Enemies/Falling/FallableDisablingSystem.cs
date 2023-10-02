@@ -1,3 +1,4 @@
+using Code.ECS.Enemies.Targeting;
 using Code.ECS.Moving;
 using Unity.Burst;
 using Unity.Entities;

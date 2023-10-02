@@ -119,3 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EntityTemplate: {fileID: 11400000, guid: 5398c2decd3fbf449b56e4b9597481f5, type: 2}
+  Features: []
+  references:
+    version: 2
+    RefIds: []

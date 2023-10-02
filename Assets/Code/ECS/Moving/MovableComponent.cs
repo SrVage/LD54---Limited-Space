@@ -1,12 +1,11 @@
 using Code.Abstract.Interfaces;
 using Unity.Entities;
+using UnityEngine;
 
 namespace Code.ECS.Moving
 {
     public struct MovableComponent : IComponentData, IEntityFeature, IEnableableComponent
     {
-        public float Speed;
-        
         public void Compose(IBaker baker, Entity entity)
         {
             baker.AddComponent(entity, this);

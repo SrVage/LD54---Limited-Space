@@ -1,4 +1,5 @@
-﻿using Code.ECS.Player.Components;
+﻿using Code.ECS.Common.References;
+using Code.ECS.Player.Components;
 using Unity.Collections;
 using Unity.Entities;
 
@@ -9,10 +10,16 @@ namespace Code.ECS.Player.Systems
         public void OnUpdate(ref SystemState state)
         {
             EntityCommandBuffer ecb = new EntityCommandBuffer(Allocator.Temp);
-            foreach (var damageAspect in SystemAPI.Query<DamageAspect>())
+
+            foreach (var audioServiceReference in SystemAPI.Query<AudioServiceReference>())
             {
-                damageAspect.Hit(state.EntityManager, ecb);
+                foreach (var damageAspect in SystemAPI.Query<DamageAspect>())
+                {
+                    damageAspect.Hit(state.EntityManager, ecb);
+                    audioServiceReference.Value.PlayHit();
+                }
             }
+
             ecb.Playback(state.EntityManager);
             ecb.Dispose();
         }

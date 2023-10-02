@@ -1,5 +1,7 @@
 using Code.Abstract.Interfaces;
 using Code.ECS.Common.References;
+using Code.ECS.States.Components;
+using Code.LevelLoader.Components;
 using Unity.Burst;
 using Unity.Collections;
 using Unity.Entities;
@@ -38,6 +40,7 @@ namespace Code.ECS.Enemies.Spawn
         {
             RequireForUpdate<EnemySpawnerComponent>();
             RequireForUpdate<EnemySpawnPointComponent>();
+            RequireForUpdate<PlayState>();
             RequireForUpdate<ReferenceConfigReferenceService>();
 
             var spawnedEnemiesQuery = new EntityQueryDesc
@@ -111,39 +114,38 @@ namespace Code.ECS.Enemies.Spawn
         private void StartSpawn()
         {
             var availablePoints = _spawnPointsQuery.ToComponentDataArray<LocalTransform>(Allocator.Temp);
+            var pointsOffsets = _spawnPointsQuery.ToComponentDataArray<EnemySpawnPointComponent>(Allocator.Temp);
             
-            foreach (var (enemySpawnerComponent, spawnerEntity) in SystemAPI.Query<RefRO<EnemySpawnerComponent>>().WithEntityAccess())
+            int spawnCount;
+
+            spawnCount = _enemies.SpawnPerTime > availablePoints.Length ? availablePoints.Length : _enemies.SpawnPerTime;
+            
+            for (int i = 0; i < spawnCount; i++)
             {
-                int spawnCount;
+                int randomIndex = Random.Range(0, availablePoints.Length);
+                _cachedSpawnPosition = availablePoints[randomIndex].Position + pointsOffsets[randomIndex].OffsetFromOriginalEntity;
+                Debug.Log("OffsetFromOriginalEntity: "+ pointsOffsets[randomIndex].OffsetFromOriginalEntity);
+                // Spawn new enemy
 
-                spawnCount = _enemies.SpawnPerTime > availablePoints.Length ? availablePoints.Length : _enemies.SpawnPerTime;
+                var enemiesPrefabsQuery = _loadedEnemiesPrefabsQueries[_currentEnemyTag % _loadedEnemiesPrefabsQueries.Length];
                 
-                for (int i = 0; i < spawnCount; i++)
+                if (enemiesPrefabsQuery.IsEmpty)
                 {
-                    _cachedSpawnPosition = availablePoints[i].Position;
-                    
-                    // Spawn new enemy
-
-                    var enemiesPrefabsQuery = _loadedEnemiesPrefabsQueries[_currentEnemyTag % _loadedEnemiesPrefabsQueries.Length];
-                    
-                    if (enemiesPrefabsQuery.IsEmpty)
-                    {
-                        Debug.Log($"{enemiesPrefabsQuery} wasn't found!");
-                        continue;
-                    }
-                    
-                    var enemiesPrefabsEntities = enemiesPrefabsQuery.ToEntityArray(Allocator.Temp);
-                    _cachedEnemyEntity = World.EntityManager.Instantiate(enemiesPrefabsEntities[Random.Range(0, enemiesPrefabsEntities.Length)]);
-                    enemiesPrefabsEntities.Dispose();
-                    _currentEnemyTag++;
-
-                    SystemAPI.GetComponentRW<LocalTransform>(_cachedEnemyEntity).ValueRW.Position = _cachedSpawnPosition;
-
-                    var mass = EntityManager.GetComponentData<PhysicsMass>(_cachedEnemyEntity);
-                    mass.InverseInertia.x = 0;
-                    mass.InverseInertia.z = 0;
-                    EntityManager.SetComponentData(_cachedEnemyEntity, mass);
+                    Debug.Log($"{enemiesPrefabsQuery} wasn't found!");
+                    continue;
                 }
+                
+                var enemiesPrefabsEntities = enemiesPrefabsQuery.ToEntityArray(Allocator.Temp);
+                _cachedEnemyEntity = World.EntityManager.Instantiate(enemiesPrefabsEntities[Random.Range(0, enemiesPrefabsEntities.Length)]);
+                enemiesPrefabsEntities.Dispose();
+                _currentEnemyTag++;
+
+                SystemAPI.GetComponentRW<LocalTransform>(_cachedEnemyEntity).ValueRW.Position = _cachedSpawnPosition;
+
+                var mass = EntityManager.GetComponentData<PhysicsMass>(_cachedEnemyEntity);
+                mass.InverseInertia.x = 0;
+                mass.InverseInertia.z = 0;
+                EntityManager.SetComponentData(_cachedEnemyEntity, mass);
             }
         }
     }

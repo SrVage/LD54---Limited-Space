@@ -5,6 +5,7 @@ namespace Code.Abstract.Interfaces.UI.Gameplay
 {
     public interface IPlayerStatusService : IUIService
     {
-        public ReactiveProperty<float> PlayerHealth { set; get; }
+        public ReactiveProperty<int> PlayerMaxHealth { set; get; }
+        public ReactiveProperty<int> PlayerCurrentHealth { set; get; }
     }
 }

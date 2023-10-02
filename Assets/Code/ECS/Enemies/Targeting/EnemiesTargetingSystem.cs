@@ -20,10 +20,11 @@ namespace Code.ECS.Enemies.Targeting
         {
             Entity playerEntity = SystemAPI.GetSingletonEntity<PlayerComponent>();
             
-            foreach (var targetableComponent in SystemAPI.Query<RefRW<TargetableComponent>>().WithAll<EnemyComponent>())
+            foreach (var (targetableComponent, entity) in SystemAPI.Query<RefRW<TargetableComponent>>().WithAll<EnemyComponent>().WithEntityAccess().WithOptions(EntityQueryOptions.IgnoreComponentEnabledState))
             {
                 if (targetableComponent.ValueRO.Target != playerEntity)
                 {
+                    state.EntityManager.SetComponentEnabled<TargetableComponent>(entity, true);
                     targetableComponent.ValueRW.Target = SystemAPI.GetSingletonEntity<PlayerComponent>();
                 }
             }

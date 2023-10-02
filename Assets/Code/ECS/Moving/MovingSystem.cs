@@ -1,6 +1,11 @@
+using Code.ECS.CommonComponents;
+using Code.ECS.Enemies.Falling;
 using Unity.Burst;
 using Unity.Entities;
+using Unity.Mathematics;
+using Unity.Physics;
 using Unity.Transforms;
+using UnityEngine;
 
 namespace Code.ECS.Moving
 {
@@ -15,9 +20,9 @@ namespace Code.ECS.Moving
         [BurstCompile]
         public void OnUpdate(ref SystemState state)
         {
-            foreach (var (movable, localTransform) in SystemAPI.Query<RefRO<MovableComponent>, RefRW<LocalTransform>>())
+            foreach (var (physicsVelocity, speed, localTransform) in SystemAPI.Query<RefRW<PhysicsVelocity>, RefRO<SpeedComponent>, RefRO<LocalTransform>>().WithAll<MovableComponent>().WithNone<FallableComponent>())
             {
-                localTransform.ValueRW.Position += localTransform.ValueRO.Forward() * movable.ValueRO.Speed * SystemAPI.Time.DeltaTime;
+                physicsVelocity.ValueRW.Linear = localTransform.ValueRO.Forward() * speed.ValueRO.Value * speed.ValueRO.Multiply;
             }
         }
     }

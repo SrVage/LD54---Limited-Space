@@ -1,5 +1,7 @@
+using Code.ECS.Common.References;
 using Code.ECS.Player.Components;
 using Code.LevelLoader.Components;
+using Code.Services.UI.Gameplay.Panels;
 using Unity.Burst;
 using Unity.Entities;
 using Unity.Physics;
@@ -25,7 +27,6 @@ namespace Code.LevelLoader.System
             state.RequireForUpdate<SpawnPointComponent>();
         }
 
-        [BurstCompile]
         public void OnUpdate(ref SystemState state)
         {
             if (_playerSpawnedQuery.CalculateEntityCount() > 0)
@@ -42,12 +43,11 @@ namespace Code.LevelLoader.System
             mass.InverseInertia.x = 0;
             mass.InverseInertia.z = 0;
             state.EntityManager.SetComponentData(entity, mass);
-        }
 
-        [BurstCompile]
-        public void OnDestroy(ref SystemState state)
-        {
-
+            foreach (var playerStatusService in SystemAPI.Query<PlayerStatusServiceReference>())
+            {
+                playerStatusService.Value.PlayerMaxHealth.Value = 100;
+            }
         }
     }
 }

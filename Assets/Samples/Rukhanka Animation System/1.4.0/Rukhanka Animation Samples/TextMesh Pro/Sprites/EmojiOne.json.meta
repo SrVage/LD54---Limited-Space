@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ed94b7225e54f83408e99148fffb1d07
+timeCreated: 1480316860
+licenseType: Store
+TextScriptImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 241472
+  packageName: Rukhanka - ECS Animation System
+  packageVersion: 1.4.0
+  assetPath: Packages/com.rk.rukhanka/Samples~/Samples/TextMesh Pro/Sprites/EmojiOne.json
+  uploadId: 616667

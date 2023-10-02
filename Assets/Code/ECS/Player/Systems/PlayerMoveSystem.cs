@@ -39,19 +39,19 @@ namespace Code.ECS.Player.Systems
     public readonly partial struct MovePlayerAspect : IAspect
     {
         private readonly RefRW<LocalTransform> _transform;
-        private readonly RefRO<SpeedComponent> _speed;
+        private readonly RefRW<SpeedComponent> _speed;
         private readonly RefRW<PhysicsVelocity> _velocity;
         private readonly Entity _entity;
 
         public void Move(float2 direction, EntityManager entityManager, EntityCommandBuffer ecb)
         {
-            float multiply = 1;
+            /*_speed.ValueRW.Multiply = 1;
             if (entityManager.HasComponent<MultiplyComponent>(_entity))
             {
-                multiply = entityManager.GetComponentData<MultiplyComponent>(_entity).Value;
+                _speed.ValueRW.Multiply = entityManager.GetComponentData<MultiplyComponent>(_entity).Value;
                 ecb.RemoveComponent<MultiplyComponent>(_entity);
-            }
-            var speed = _speed.ValueRO.Value*multiply;
+            }*/
+            var speed = _speed.ValueRO.Value * _speed.ValueRO.Multiply;
             _velocity.ValueRW.Linear = new float3(direction.x, 0, direction.y) * speed;
             if (direction.x != 0 && direction.y != 0)
             {

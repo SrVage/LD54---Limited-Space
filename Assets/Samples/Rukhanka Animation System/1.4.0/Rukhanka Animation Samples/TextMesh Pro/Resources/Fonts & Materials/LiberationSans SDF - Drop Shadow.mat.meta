@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 699f589d624959d4c815975319ad7689
+timeCreated: 1484172806
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 241472
+  packageName: Rukhanka - ECS Animation System
+  packageVersion: 1.4.0
+  assetPath: Packages/com.rk.rukhanka/Samples~/Samples/TextMesh Pro/Resources/Fonts
+    & Materials/LiberationSans SDF - Drop Shadow.mat
+  uploadId: 616667

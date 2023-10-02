@@ -14,16 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Name>k__BackingField: 
   _features:
-  - rid: 6923755597894516744
+  - rid: 6923755603504136193
   references:
     version: 2
     RefIds:
-    - rid: 6923755597894516744
+    - rid: 6923755603504136193
       type: {class: EnemySpawnPointComponent, ns: Code.ECS.Enemies.Spawn, asm: Assembly-CSharp}
       data:
         OffsetFromOriginalEntity:
           x: 0
-          y: 5
+          y: 10
           z: 0
         EndValue:
           x: 0

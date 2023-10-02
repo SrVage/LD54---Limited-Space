@@ -1,8 +1,10 @@
 using Code.Abstract.Interfaces;
 using Code.Abstract.Interfaces.UI.Common;
+using Code.Abstract.Interfaces.UI.Gameplay;
 using Code.Abstract.Interfaces.UI.MainMenu;
 using Code.Audio.Service;
 using Code.Services.UI.Gameplay;
+using Code.Services.UI.Gameplay.Panels;
 using Code.Services.UI.MainMenu;
 using Code.Services.UI.MainMenu.Panels;
 using Code.UI;
@@ -28,6 +30,7 @@ namespace Code.Services
             Container.Bind<IUIManager>().WithId(nameof(Gameplay)).To<Gameplay>().AsSingle().NonLazy();
             
             Container.Bind<IAudioService>().To<AudioService>().AsSingle();
+            Container.Bind<IPlayerStatusService>().To<PlayerStatusService>().AsSingle().NonLazy();
             Container.Bind<IConfigReferenceService>().To<ConfigReferenceService>().AsSingle().NonLazy();
         }
     }

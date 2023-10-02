@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: a7d3fbdaf8f730644bf1010cd28b65a1
+timeCreated: 1484172856
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 241472
+  packageName: Rukhanka - ECS Animation System
+  packageVersion: 1.4.0
+  assetPath: Packages/com.rk.rukhanka/Samples~/Samples/TextMesh Pro/Resources/Fonts
+    & Materials/LiberationSans SDF - Outline.mat
+  uploadId: 616667
