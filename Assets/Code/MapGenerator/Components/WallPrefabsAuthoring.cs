@@ -12,6 +12,7 @@ namespace Code.MapGenerator.Components
     {
         public Entity SimpleWallPrefab;       
         public Entity LightWallPrefab;         
+        public Entity TransparentWallPrefab;         
         public int Percents;
     }
 
@@ -24,6 +25,7 @@ namespace Code.MapGenerator.Components
             {
                 SimpleWallPrefab = GetEntity(authoring.Config.SimpleWallPrefab, TransformUsageFlags.Dynamic),
                 LightWallPrefab = GetEntity(authoring.Config.LightWallPrefab, TransformUsageFlags.Dynamic),
+                TransparentWallPrefab = GetEntity(authoring.Config.TransparentWallPrefab, TransformUsageFlags.Dynamic),
                 Percents = authoring.Config.WallPercents
             });
         }

@@ -4,7 +4,6 @@ using Code.ECS.Player.Components;
 using Unity.Burst;
 using Unity.Collections;
 using Unity.Entities;
-using UnityEngine;
 
 namespace Code.ECS.Enemies.Attacking
 {

@@ -18,6 +18,7 @@ namespace Code.MapGenerator
         [Header("Walls")]
         public GameObject SimpleWallPrefab;
         public GameObject LightWallPrefab;
+        public GameObject TransparentWallPrefab;
         public int WallPercents;
     }
 }
