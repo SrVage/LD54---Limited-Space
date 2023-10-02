@@ -747,38 +747,7 @@ ModelImporter:
     removeConstantScaleCurves: 0
     motionNodeName: 
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'Walk' has import animation warnings that might
-      lower retargeting quality:\nNote: Activate translation DOF on avatar to improve
-      retargeting quality.\n\t'Skeleton_0010:QuickRigCharacter_LeftLeg' has translation
-      animation that will be discarded.\n\t'Skeleton_0010:QuickRigCharacter_RightLeg'
-      has translation animation that will be discarded.\n\t'Skeleton_0010:QuickRigCharacter_Spine1'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Skeleton_0010:QuickRigCharacter_RightForeArm'
-      has translation animation that will be discarded.\n\nClip 'Run' has import
-      animation warnings that might lower retargeting quality:\nNote: Activate translation
-      DOF on avatar to improve retargeting quality.\n\t'Skeleton_0010:QuickRigCharacter_LeftLeg'
-      has translation animation that will be discarded.\n\t'Skeleton_0010:QuickRigCharacter_RightLeg'
-      has translation animation that will be discarded.\n\t'Skeleton_0010:QuickRigCharacter_Spine1'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Skeleton_0010:QuickRigCharacter_RightForeArm'
-      has translation animation that will be discarded.\n\nClip 'Attack1' has import
-      animation warnings that might lower retargeting quality:\nNote: Activate translation
-      DOF on avatar to improve retargeting quality.\n\t'Skeleton_0010:QuickRigCharacter_LeftLeg'
-      has translation animation that will be discarded.\n\t'Skeleton_0010:QuickRigCharacter_LeftToeBase'
-      has translation animation that will be discarded.\n\t'Skeleton_0010:QuickRigCharacter_RightLeg'
-      has translation animation that will be discarded.\n\t'Skeleton_0010:QuickRigCharacter_Spine1'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Skeleton_0010:QuickRigCharacter_RightForeArm'
-      has translation animation that will be discarded.\n\nClip 'Attack2' has import
-      animation warnings that might lower retargeting quality:\nNote: Activate translation
-      DOF on avatar to improve retargeting quality.\n\t'Skeleton_0010:QuickRigCharacter_LeftLeg'
-      has translation animation that will be discarded.\n\t'Skeleton_0010:QuickRigCharacter_RightLeg'
-      has translation animation that will be discarded.\n\t'Skeleton_0010:QuickRigCharacter_RightToeBase'
-      has translation animation that will be discarded.\n\t'Skeleton_0010:QuickRigCharacter_Spine1'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Skeleton_0010:QuickRigCharacter_RightForeArm'
-      has translation animation that will be discarded.\n\nClip 'Death' has import
-      animation warnings that might lower retargeting quality:\nNote: Activate translation
-      DOF on avatar to improve retargeting quality.\n\t'Skeleton_0010:QuickRigCharacter_LeftLeg'
-      has translation animation that will be discarded.\n\t'Skeleton_0010:QuickRigCharacter_Spine1'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Skeleton_0010:QuickRigCharacter_RightForeArm'
-      has translation animation that will be discarded.\n"
+    animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0

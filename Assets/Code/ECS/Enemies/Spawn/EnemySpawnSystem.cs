@@ -1,6 +1,8 @@
+using System.Linq;
 using Code.Abstract.Interfaces;
 using Code.ECS.Common.References;
 using Code.ECS.States.Components;
+using Code.ECS.Wall.Components;
 using Unity.Burst;
 using Unity.Collections;
 using Unity.Entities;
@@ -33,7 +35,8 @@ namespace Code.ECS.Enemies.Spawn
         private NativeArray<EntityQuery> _loadedEnemiesPrefabsQueries;
         private int _currentEnemyTag;
         private bool _isEnemiesCountWritten;
-        
+        private EntityQuery _movableWallQuery;
+
         protected override void OnCreate()
         {
             RequireForUpdate<EnemySpawnerComponent>();
@@ -49,6 +52,7 @@ namespace Code.ECS.Enemies.Spawn
             
             _spawnedEnemiesQuery = World.EntityManager.CreateEntityQuery(typeof(EnemyComponent));
             _spawnPointsQuery = World.EntityManager.CreateEntityQuery(typeof(EnemySpawnPointComponent), typeof(LocalTransform));
+            _movableWallQuery = World.EntityManager.CreateEntityQuery(typeof(MovableTag), typeof(LocalTransform));
             //_reusableEnemiesQuery = World.EntityManager.CreateEntityQuery(typeof(EnemyComponent), typeof(ReadyForReuseComponent));
 
             _cachedSpawnPosition = default;
@@ -110,9 +114,10 @@ namespace Code.ECS.Enemies.Spawn
         [BurstCompile]
         private void StartSpawn()
         {
-            var availablePoints = _spawnPointsQuery.ToComponentDataArray<LocalTransform>(Allocator.Temp);
+            var points = _movableWallQuery.ToComponentDataArray<LocalTransform>(Allocator.Temp).First();
+            var availablePoints = _spawnPointsQuery.ToComponentDataArray<LocalTransform>(Allocator.Temp).Where(i=>i.Position.z<points.Position.z-1).ToArray();
             var pointsOffsets = _spawnPointsQuery.ToComponentDataArray<EnemySpawnPointComponent>(Allocator.Temp);
-            
+
             int spawnCount;
 
             spawnCount = _enemies.SpawnPerTime > availablePoints.Length ? availablePoints.Length : _enemies.SpawnPerTime;
