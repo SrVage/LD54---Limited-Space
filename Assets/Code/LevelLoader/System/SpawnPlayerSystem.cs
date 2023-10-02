@@ -1,8 +1,6 @@
 using Code.ECS.Common.References;
 using Code.ECS.Player.Components;
 using Code.LevelLoader.Components;
-using Code.Services.UI.Gameplay.Panels;
-using Unity.Burst;
 using Unity.Entities;
 using Unity.Physics;
 using Unity.Transforms;
@@ -47,6 +45,7 @@ namespace Code.LevelLoader.System
             foreach (var playerStatusService in SystemAPI.Query<PlayerStatusServiceReference>())
             {
                 playerStatusService.Value.PlayerMaxHealth.Value = 100;
+                playerStatusService.Value.PlayerCurrentHealth.Value = 100;
             }
         }
     }

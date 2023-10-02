@@ -2,7 +2,6 @@ using Code.Abstract;
 using Code.Abstract.Interfaces.UI.Gameplay;
 using UniRx;
 using UnityEngine;
-using UnityEngine.UI;
 using Zenject;
 
 namespace Code.UI.View
@@ -31,8 +30,8 @@ namespace Code.UI.View
 
         private void OnHealthChanged(int value)
         {
-            _cachedHealthPercent = value / _playerStatusService.PlayerMaxHealth.Value;
-            
+            _cachedHealthPercent = value / (float)_playerStatusService.PlayerMaxHealth.Value;
+            Debug.Log(_cachedHealthPercent);
             _cachedAnchorMin = _healthBarRect.anchorMin;
             _cachedAnchorMax = _healthBarRect.anchorMax;
 

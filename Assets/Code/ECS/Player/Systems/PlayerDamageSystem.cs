@@ -1,7 +1,10 @@
-﻿using Code.ECS.Common.References;
+﻿using System.Security.Cryptography.X509Certificates;
+using Code.Abstract.Interfaces.UI.Gameplay;
+using Code.ECS.Common.References;
 using Code.ECS.Player.Components;
 using Unity.Collections;
 using Unity.Entities;
+using UnityEngine;
 
 namespace Code.ECS.Player.Systems
 {
@@ -10,16 +13,22 @@ namespace Code.ECS.Player.Systems
         public void OnUpdate(ref SystemState state)
         {
             EntityCommandBuffer ecb = new EntityCommandBuffer(Allocator.Temp);
-
-            foreach (var audioServiceReference in SystemAPI.Query<AudioServiceReference>())
+            foreach (var playerStatusReference in SystemAPI.Query<PlayerStatusServiceReference>())
             {
-                foreach (var damageAspect in SystemAPI.Query<DamageAspect>())
+                foreach (var audioServiceReference in SystemAPI.Query<AudioServiceReference>())
                 {
-                    damageAspect.Hit(state.EntityManager, ecb);
-                    audioServiceReference.Value.PlayHit();
+                    foreach (var damageAspect in SystemAPI.Query<DamageAspect>().WithNone<PlayerComponent>())
+                    {
+                        damageAspect.Hit(state.EntityManager, ecb);
+                        audioServiceReference.Value.PlayHit();
+                    }
+                    foreach (var damageAspect in SystemAPI.Query<DamageAspect>().WithAll<PlayerComponent>())
+                    {
+                        damageAspect.Hit(state.EntityManager, ecb, playerStatusReference.Value);
+                        audioServiceReference.Value.PlayHit();
+                    }
                 }
             }
-
             ecb.Playback(state.EntityManager);
             ecb.Dispose();
         }
@@ -30,6 +39,12 @@ namespace Code.ECS.Player.Systems
         private readonly RefRW<HealthComponent> _health;
         private readonly RefRO<HitComponent> _hit;
         private readonly Entity _entity;
+
+        public void Hit(EntityManager entityManager, EntityCommandBuffer ecb, IPlayerStatusService playerStatusService)
+        {
+            Hit(entityManager, ecb);
+            playerStatusService.PlayerCurrentHealth.Value = _health.ValueRO.Value;
+        }
 
         public void Hit(EntityManager entityManager, EntityCommandBuffer ecb)
         {

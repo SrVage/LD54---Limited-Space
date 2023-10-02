@@ -442,7 +442,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _selfCanvas: {fileID: 8261912322880914669}
-  _healthBarRect: {fileID: 0}
+  _healthBarRect: {fileID: 3813763076060031866}
 --- !u!1001 &7651282752251138735
 PrefabInstance:
   m_ObjectHideFlags: 0
