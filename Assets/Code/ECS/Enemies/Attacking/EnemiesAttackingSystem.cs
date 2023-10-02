@@ -1,6 +1,7 @@
 using Code.ECS.Enemies.Targeting;
 using Code.ECS.Moving;
 using Code.ECS.Player.Components;
+using Rukhanka;
 using Unity.Burst;
 using Unity.Collections;
 using Unity.Entities;
@@ -9,18 +10,22 @@ namespace Code.ECS.Enemies.Attacking
 {
     public partial struct EnemiesAttackingSystem : ISystem
     {
+        private FastAnimatorParameter _attackHash;
+
         [BurstCompile]
         public void OnCreate(ref SystemState state)
         {
             state.RequireForUpdate<AttackableComponent>();
             state.RequireForUpdate<TargetableComponent>();
+            var attackName = new FixedString512Bytes("Attack");
+            _attackHash = new FastAnimatorParameter(attackName);
         }
         
         [BurstCompile]
         public void OnUpdate(ref SystemState state)
         {
             EntityCommandBuffer ecb = new EntityCommandBuffer(Allocator.Temp);
-            foreach (var (attackable, targetable, entity) in SystemAPI.Query<RefRW<AttackableComponent>, RefRO<TargetableComponent>>().WithEntityAccess())
+            foreach (var (attackable, targetable, animator, entity) in SystemAPI.Query<RefRW<AttackableComponent>, RefRO<TargetableComponent>, AnimatorParametersAspect>().WithEntityAccess())
             {
                 if (state.EntityManager.HasComponent<MovableComponent>(entity) && state.EntityManager.IsComponentEnabled<MovableComponent>(entity))
                 {
@@ -36,7 +41,7 @@ namespace Code.ECS.Enemies.Attacking
                 {
                     continue;
                 }
-
+                animator.SetTrigger(_attackHash);
                 ecb.AddComponent<HitComponent>(targetable.ValueRO.Target);
                 ecb.SetComponent(targetable.ValueRO.Target, new HitComponent()
                 {
