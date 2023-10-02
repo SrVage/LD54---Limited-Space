@@ -18,10 +18,10 @@ MonoBehaviour:
     SpawnPerTime: 1
     PerHalfMinuteMultiply: 5
     Tags:
-    - rid: 6923755604152418305
+    - rid: 6923755609004179459
   references:
     version: 2
     RefIds:
-    - rid: 6923755604152418305
+    - rid: 6923755609004179459
       type: {class: Blank, ns: Code.ECS.Enemies.Tag, asm: Assembly-CSharp}
       data: 

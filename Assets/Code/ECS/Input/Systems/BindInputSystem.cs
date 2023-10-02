@@ -1,4 +1,5 @@
 ﻿using Client.Code.ECS.Input;
+using Code.ECS.Input.Components;
 using Unity.Entities;
 using Unity.Mathematics;
 using UnityEngine;
@@ -10,7 +11,6 @@ namespace Code.ECS.Input.Systems
     {
         private InputAction _moveAction;
         private InputAction _attackAction;
-        private InputAction _sprintAction;
         private float2 _inputValue;
 
         protected override void OnCreate()
@@ -62,8 +62,6 @@ namespace Code.ECS.Input.Systems
             _moveAction.Disable();
             _attackAction.Dispose();
             _attackAction.Disable();
-            _sprintAction.Dispose();
-            _sprintAction.Disable();
         }
     }
 }

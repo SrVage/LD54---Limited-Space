@@ -1,6 +1,6 @@
 ﻿using Unity.Entities;
 
-namespace Client.Code.ECS.Input
+namespace Code.ECS.Input.Components
 {
     public struct AttackComponent:IComponentData
     {
