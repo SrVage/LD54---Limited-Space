@@ -12,7 +12,6 @@ namespace Code.ECS.Enemies.Attacking
     {
         private FastAnimatorParameter _attackHash;
 
-        [BurstCompile]
         public void OnCreate(ref SystemState state)
         {
             state.RequireForUpdate<AttackableComponent>();

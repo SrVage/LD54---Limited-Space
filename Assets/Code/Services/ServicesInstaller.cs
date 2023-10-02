@@ -17,7 +17,6 @@ namespace Code.Services
     public class ServicesInstaller : MonoInstaller
     {
         [SerializeField] private UITag _uiTag;
-        [SerializeField] private SubScene _subScene;
         
         public override void InstallBindings()
         {
@@ -34,8 +33,6 @@ namespace Code.Services
             Container.Bind<IAudioService>().To<AudioService>().AsSingle();
             Container.Bind<IPlayerStatusService>().To<PlayerStatusService>().AsSingle().NonLazy();
             Container.Bind<IConfigReferenceService>().To<ConfigReferenceService>().AsSingle().NonLazy();
-            Container.Bind<SubScene>().FromInstance(_subScene).AsSingle();
-            Container.Bind<ISceneReferenceService>().To<SceneReferenceService>().AsSingle().NonLazy();
         }
     }
 }

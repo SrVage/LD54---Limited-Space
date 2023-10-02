@@ -1,7 +1,6 @@
 ﻿using Code.ECS.Common.References;
-using Code.ECS.Enemies.Spawn;
 using Code.MapGenerator.Components;
-using Code.Services;
+using Unity.Burst;
 using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Transforms;
@@ -10,6 +9,7 @@ using Random = UnityEngine.Random;
 
 namespace Code.MapGenerator.Systems
 {
+    [BurstCompile]
     public partial struct GenerateLevelSystem:ISystem
     {
         private EntityQuery _signalQuery;

@@ -1,5 +1,6 @@
 ﻿using Code.ECS.Wall.Components;
 using Code.MapGenerator.Components;
+using Unity.Burst;
 using Unity.Collections;
 using Unity.Entities;
 using Unity.Mathematics;
@@ -10,6 +11,7 @@ using Random = UnityEngine.Random;
 namespace Code.MapGenerator.Systems
 {
     [UpdateBefore(typeof(GenerateLevelSystem))]
+    [BurstCompile]
     public partial struct GenerateWallSystem:ISystem
     {
         private EntityQuery _signalQuery;
