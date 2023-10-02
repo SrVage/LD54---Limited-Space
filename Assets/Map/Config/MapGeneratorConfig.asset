@@ -35,4 +35,6 @@ MonoBehaviour:
     type: 3}
   LightWallPrefab: {fileID: 3714572846654648569, guid: b6bbf3513ac0d2b4cb87ca95ac53772f,
     type: 3}
+  TransparentWallPrefab: {fileID: 1845394320730086, guid: 598a5e5edf426dc4abf33c75df351546,
+    type: 3}
   WallPercents: 60

@@ -19,9 +19,13 @@ MonoBehaviour:
     PerHalfMinuteMultiply: 5
     Tags:
     - rid: 6923755609004179459
+    - rid: 160921276206022656
   references:
     version: 2
     RefIds:
+    - rid: 160921276206022656
+      type: {class: Mummy, ns: Code.ECS.Enemies.Tag, asm: Assembly-CSharp}
+      data: 
     - rid: 6923755609004179459
       type: {class: Blank, ns: Code.ECS.Enemies.Tag, asm: Assembly-CSharp}
       data: 

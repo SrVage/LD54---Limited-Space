@@ -1,13 +1,11 @@
 using Code.Abstract.Interfaces;
 using Code.ECS.Common.References;
 using Code.ECS.States.Components;
-using Code.LevelLoader.Components;
 using Unity.Burst;
 using Unity.Collections;
 using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Physics;
-using Unity.Rendering;
 using Unity.Transforms;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -105,7 +103,6 @@ namespace Code.ECS.Enemies.Spawn
                     
                     _loadedEnemiesPrefabsQueries[i] = World.EntityManager.CreateEntityQuery(spawnedEnemiesDesc);
                 }
-                
                 _isEnemiesCountWritten = true;
             }
         }
