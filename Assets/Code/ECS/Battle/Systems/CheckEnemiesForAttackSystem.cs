@@ -1,4 +1,5 @@
 ﻿using Code.ECS.Player.Components;
+using Code.ECS.States.Components;
 using Code.ECS.Wall.Components;
 using Unity.Collections;
 using Unity.Entities;
@@ -15,6 +16,7 @@ namespace Code.ECS.Battle.Systems
 
         public void OnCreate(ref SystemState state)
         {
+            state.RequireForUpdate<PlayState>();
             _returnTimer = SystemAPI.QueryBuilder().WithAll<ReturnWallTimer>().Build();
         }
 

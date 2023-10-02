@@ -1,3 +1,4 @@
+using Code.ECS.States.Components;
 using Unity.Burst;
 using Unity.Entities;
 
@@ -11,6 +12,7 @@ namespace Code.ECS.Enemies.Spawn
         public void OnCreate(ref SystemState state)
         {
             state.RequireForUpdate<EnemySpawnerComponent>();
+            state.RequireForUpdate<PlayState>();
         }
         
         [BurstCompile]

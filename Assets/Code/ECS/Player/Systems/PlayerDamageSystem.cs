@@ -1,7 +1,10 @@
 ﻿using System.Security.Cryptography.X509Certificates;
+using Code.Abstract.Enums;
 using Code.Abstract.Interfaces.UI.Gameplay;
 using Code.ECS.Common.References;
 using Code.ECS.Player.Components;
+using Code.ECS.States.Components;
+using Code.Services;
 using Unity.Collections;
 using Unity.Entities;
 using UnityEngine;
@@ -10,6 +13,11 @@ namespace Code.ECS.Player.Systems
 {
     public partial struct PlayerDamageSystem:ISystem
     {
+        public void OnCreate(ref SystemState state)
+        {
+            state.RequireForUpdate<PlayState>();
+        }
+
         public void OnUpdate(ref SystemState state)
         {
             EntityCommandBuffer ecb = new EntityCommandBuffer(Allocator.Temp);
@@ -44,6 +52,11 @@ namespace Code.ECS.Player.Systems
         {
             Hit(entityManager, ecb);
             playerStatusService.PlayerCurrentHealth.Value = _health.ValueRO.Value;
+            if (_health.ValueRO.Value <= 0)
+            {
+                ecb.AddComponent(ecb.CreateEntity(), new ChangeState(){Value = State.LooseState});
+                ecb.RemoveComponent<HealthComponent>(_entity);
+            }
         }
 
         public void Hit(EntityManager entityManager, EntityCommandBuffer ecb)

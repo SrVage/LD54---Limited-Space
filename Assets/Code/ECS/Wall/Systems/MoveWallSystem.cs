@@ -1,5 +1,6 @@
 ﻿using Code.ECS.States.Components;
 using Code.ECS.Wall.Components;
+using Unity.Collections;
 using Unity.Entities;
 
 namespace Code.ECS.Wall.Systems
@@ -15,10 +16,13 @@ namespace Code.ECS.Wall.Systems
 
         public void OnUpdate(ref SystemState state)
         {
+            EntityCommandBuffer ecb = new EntityCommandBuffer(Allocator.Temp);
             foreach (var moveWall in SystemAPI.Query<MoveWallAspect>())
             {
-                moveWall.Move(SystemAPI.Time.DeltaTime, !_returnTimer.IsEmpty);
+                moveWall.Move(SystemAPI.Time.DeltaTime, ecb, !_returnTimer.IsEmpty);
             }
+            ecb.Playback(state.EntityManager);
+            ecb.Dispose();
         }
     }
 }

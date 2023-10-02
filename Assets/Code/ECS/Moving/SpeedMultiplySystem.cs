@@ -2,6 +2,7 @@ using Code.ECS.CommonComponents;
 using Code.ECS.Enemies.Falling;
 using Code.ECS.Player.Components;
 using Code.ECS.Player.Systems;
+using Code.ECS.States.Components;
 using Unity.Burst;
 using Unity.Collections;
 using Unity.Entities;
@@ -18,6 +19,7 @@ namespace Code.ECS.Moving
         public void OnCreate(ref SystemState state)
         {
             state.RequireForUpdate<SpeedComponent>();
+            state.RequireForUpdate<PlayState>();
         }
         
         [BurstCompile]

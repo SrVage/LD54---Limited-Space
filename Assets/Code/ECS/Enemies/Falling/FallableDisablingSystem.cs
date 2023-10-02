@@ -1,5 +1,6 @@
 using Code.ECS.Enemies.Targeting;
 using Code.ECS.Moving;
+using Code.ECS.States.Components;
 using Unity.Burst;
 using Unity.Entities;
 using Unity.Transforms;
@@ -11,6 +12,7 @@ namespace Code.ECS.Enemies.Falling
         [BurstCompile]
         public void OnCreate(ref SystemState state)
         {
+            state.RequireForUpdate<PlayState>();
             state.RequireForUpdate<FallableComponent>();
         }
         

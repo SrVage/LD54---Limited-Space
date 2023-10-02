@@ -4,6 +4,7 @@
     {
         MenuState = 0,
         PlayState = 1,
-        RechargeState = 2
+        RechargeState = 2,
+        LooseState = 3
     }
 }

@@ -1,3 +1,4 @@
+using Code.ECS.States.Components;
 using Unity.Burst;
 using Unity.Entities;
 
@@ -9,6 +10,7 @@ namespace Code.ECS.Enemies.Attacking
         public void OnCreate(ref SystemState state)
         {
             state.RequireForUpdate<AttackableComponent>();
+            state.RequireForUpdate<PlayState>();
         }
         
         [BurstCompile]

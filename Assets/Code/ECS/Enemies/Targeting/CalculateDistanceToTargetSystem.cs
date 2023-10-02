@@ -1,5 +1,6 @@
 using Code.ECS.Enemies.Attacking;
 using Code.ECS.Moving;
+using Code.ECS.States.Components;
 using Unity.Burst;
 using Unity.Entities;
 using Unity.Mathematics;
@@ -13,6 +14,7 @@ namespace Code.ECS.Enemies.Targeting
         public void OnCreate(ref SystemState state)
         {
             state.RequireForUpdate<TargetableComponent>();
+            state.RequireForUpdate<PlayState>();
         }
         
         [BurstCompile]

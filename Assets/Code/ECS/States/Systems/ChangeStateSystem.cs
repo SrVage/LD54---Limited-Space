@@ -1,6 +1,7 @@
 ﻿using System;
 using Code.Abstract.Enums;
 using Code.ECS.States.Components;
+using Code.Services;
 using Unity.Entities;
 using UnityEngine;
 
@@ -38,6 +39,10 @@ namespace Code.ECS.States.Systems
                     break;
                 case State.RechargeState:
                     state.EntityManager.AddComponent<RechargeState>(stateEntity);
+                    break;
+                case State.LooseState:
+                    state.EntityManager.AddComponent<LooseState>(stateEntity);
+                    Debug.Log("Exit");
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();

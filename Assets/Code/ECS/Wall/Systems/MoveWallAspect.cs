@@ -1,8 +1,11 @@
-﻿using Code.ECS.CommonComponents;
+﻿using Code.Abstract.Enums;
+using Code.ECS.CommonComponents;
+using Code.ECS.States.Components;
 using Code.ECS.Wall.Components;
 using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Transforms;
+using UnityEngine;
 
 namespace Code.ECS.Wall.Systems
 {
@@ -15,12 +18,16 @@ namespace Code.ECS.Wall.Systems
         private readonly RefRO<BordersPositionComponent> _border;
         private readonly RefRO<MovableTag> _tag;
         
-        public void Move(float deltaTime, bool reverse = false)
+        public void Move(float deltaTime, EntityCommandBuffer ecb, bool reverse = false)
         {
             if (!reverse)
             {
-                if (math.distance(_transform.ValueRO.Position, _border.ValueRO.EndPosition)>Delta)
+                if (math.distance(_transform.ValueRO.Position, _border.ValueRO.EndPosition) > Delta)
                     _transform.ValueRW.Position += _direction.ValueRO.Value * _speed.ValueRO.Value * deltaTime;
+                else
+                {
+                    ecb.AddComponent(ecb.CreateEntity(), new ChangeState(){Value = State.LooseState});
+                }
             }
             else
             {

@@ -1,5 +1,6 @@
 using Code.ECS.CommonComponents;
 using Code.ECS.Enemies.Falling;
+using Code.ECS.States.Components;
 using Unity.Burst;
 using Unity.Entities;
 using Unity.Mathematics;
@@ -15,6 +16,7 @@ namespace Code.ECS.Moving
         public void OnCreate(ref SystemState state)
         {
             state.RequireForUpdate<MovableComponent>();
+            state.RequireForUpdate<PlayState>();
         }
         
         [BurstCompile]
